@@ -1,0 +1,24 @@
+- var social = ["Facebook", "VK", "Twitter"]
+- var menu = ["Карта проезда", "История заказов", "Корзина"]
+- var navigation = ["Планшеты", "Мобильные телефоны", "Mp3 плееры", "Персональные компьютеры", "Ноутбуки", "Аксессуары", "Бытовая техника"]
+
+header.header
+  div(class="header__row header__row_colored")
+    div(class="social header__social header__social_float-left")
+      +menu(social, 'social')
+    div(class="contacts contacts_float-right")
+      div(class="contacts__adress contacts__adress_float-left")
+      div(class="contacts__phone contacts__adress_float-right")
+  .header__row
+    div(class="logo header__logo")
+      a(href="" class="logo__link")
+        img(src="" class="logo__img")
+    div(class="search")
+      form(class="form search__form")
+        input(class="search__input" type="search")
+        input(class="search__button" type="submit")
+    div(class="menu")
+      +menu(menu, 'menu')
+  div(class="header__row header__row_colored")
+    nav(class="navigation header__navigation")
+      +menu(navigation, 'navigation')
