@@ -1,0 +1,22 @@
+.information__heading {
+  font-size: 20px;
+  color: #333;
+  padding: 0;
+  margin: 0;
+}
+.information__text {
+  padding: 25px 0 30px;
+}
+.information__p {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 25px;
+  margin-top: 0;
+  text-indent: 35px;
+  text-align: justify;
+  line-height: 1.5;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+}

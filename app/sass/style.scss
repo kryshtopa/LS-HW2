@@ -1,0 +1,125 @@
+// футер
+@import "compass/layout.scss";
+@include sticky-footer(220px, ".wrapper", "#layout_footer", ".footer");
+
+
+@import "includes/_header.scss";
+@import "includes/_aside.scss";
+@import "includes/_main.scss";
+@import "includes/_section.scss";
+@import "includes/_footer.scss";
+
+@import "includes/_socials.scss";
+
+
+
+
+
+
+
+
+html, body {
+	width: 100%;
+	height: 100%;
+	background-color: #f4f4f4;
+}
+
+.wrapper {
+    min-width: 1120px;
+}
+
+.container,
+.footer__container {
+  width: 1100px;
+  margin: 0 auto;
+}
+
+.container {
+}
+
+
+.navigation__item,
+.menu__item, {
+	display: inline-block;
+}
+
+.sidebar {
+  width: 333px;
+}
+
+
+
+.main {
+  width: 743px;
+}
+
+.navigation__list {
+}
+
+
+
+.information,
+.header__social_float-left,
+.contacts__address_float-left,
+.footer__logo_float-left,
+.footer__navigation_float-left,
+.sidebar,
+.float-left {
+  float: left;
+}
+
+.contacts_float-right,
+.contacts__address_float-right,
+.footer__social_float-right,
+.main,
+.float-right {
+  float: right;
+}
+
+.container {
+
+}
+
+
+.navigation_wide {
+  background-color: #fff;
+}
+.navigation__list {
+  padding: 0;
+  margin: 0;
+}
+.navigation__item {
+  padding: 20px;
+  font-size: 14px;
+  &:hover {
+    background-color: #e4e2e2;
+    color: #fff;
+  }
+}
+.navigation__link {
+  color: #333333;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+
+.container__heading {
+  padding: 30px 0;
+  margin: 0;
+}
+
+
+.container:before,
+.container:after,
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+.container:after,
+.cf:after {
+    clear: both;
+}
+.cf {
+    zoom: 1;
+}

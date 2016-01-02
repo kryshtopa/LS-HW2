@@ -1,0 +1,18 @@
+include includes/_mixins
+include includes/_doctype
+html(lang="ru-RU")
+include includes/_head
+body
+  .wrapper
+    include includes/_header
+    nav(class="navigation navigation_wide")
+      .container
+        +menu(navigation, 'navigation')
+    .container
+      .breadcrumbs
+      h1.container__heading Мобильные телефоны
+      include includes/_aside.jade
+      include includes/_main.jade
+      include includes/_section.jade
+      <div id='layout_footer'></div>
+  include includes/_footer

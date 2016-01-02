@@ -1,0 +1,32 @@
+- var valueSelector = ["Флагманы", "Бюджетная линейка"]
+- var optionsBrand = ["Lenovo", "Apple", "Samsung", "Asus", "Motorola"]
+- var optionsOs = ["Android", "iOS", "Windows Mobile", "Simbian", "Custom"]
+- var optionsColors = ["white", "grey", "black", "dark-purple", "red", "yellow", "orange", "green", "blue", "purple", "pink", "brown"]
+
+aside.sidebar
+  div(class="value-selector value-selector_aside")
+    +menu(valueSelector, 'value-selector')
+  .options
+    ul.options__list
+      li.options__item
+        div.options-block
+          h4.options-block__heading Наличие в магазинах
+      li.options__item
+        div.options-block
+          h4.options-block__heading Бренды
+          +menuCheckbox(optionsBrand, 'options-block')
+          a(href="#" class="options-block__reset") Сбросить фильтр
+      li.options__item
+        div.options-block
+          h4.options-block__heading Цена
+          
+      li.options__item
+        div.options-block
+          h4.options-block__heading Цвет
+          +menuColors(optionsColors, 'options-block')  
+      li.options__item
+        div.options-block
+          h4.options-block__heading Операционные системы
+          +menuCheckbox(optionsOs, 'options-block')
+          a(href="#" class="options-block__reset") Сбросить фильтр
+          

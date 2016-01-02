@@ -1,0 +1,120 @@
+
+
+
+.header__row {
+  padding: 25px 0;
+}
+.header__row_colored {
+  padding: 30px 0;
+  background-color: #f4f4f4;
+}
+
+.header {
+  background-color: #fff;
+}
+
+
+
+.contacts {
+  font-size: 14px;
+  font-family: "Open Sans";
+  color: rgb(51, 51, 51);
+  line-height: 1.714;
+  text-align: left;
+}
+
+.contacts__address,
+.contacts__phone {
+
+}
+.contacts__address {
+  font-size: 14px;
+
+  &:before {
+    content: url(../img/icons/map.png);
+  }
+}
+.contacts__phone {
+  font-size: 18px;
+  margin-left: 86px;
+  &:before {
+    content: url(../img/icons/phone.png);
+  }
+}
+
+
+
+
+.logo_header,
+.search_header {
+  float: left;
+  height: 35px;
+  width: 238px;
+}
+.logo_header {
+  margin-right: 56px;
+
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.search_header {
+  margin-right: 49px;
+  width: 367px;
+}
+.menu_header {
+  float: right;
+  height: 35px;
+  width: 390px;
+}
+
+.logo__img {
+  display: block;
+  width: 100%;
+}
+.logo__link {
+  display: block;
+}
+
+
+.search__input {
+  font-size: 14px;
+  color: #7f7f7f;
+  background-color: #fdfdfd;
+  padding: 11px 17px;
+  border: 1px solid #7f7f7f;
+  border-right: none;
+  border-radius: 3px;
+}
+.search__button {
+  background-image: -moz-linear-gradient( 56deg, rgb(255,102,0) 0%, rgb(255,106,27) 45%, rgb(255,110,53) 99%);
+  background-image: -webkit-linear-gradient( 56deg, rgb(255,102,0) 0%, rgb(255,106,27) 45%, rgb(255,110,53) 99%);
+  background-image: -ms-linear-gradient( 56deg, rgb(255,102,0) 0%, rgb(255,106,27) 45%, rgb(255,110,53) 99%);
+  color: #fff;
+  font-size: 16px;
+  width: 79px;
+  height: 34px;
+}
+
+
+.menu__list {
+  padding: 0;
+  margin: 0;
+}
+.menu__item {
+  margin: 10px 0 10px 33px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+}
+.menu__link {
+  color: #333;
+  font-size: 16px;
+  text-decoration: none;
+
+  &:hover {
+    color: #ff6600;
+  }
+}
