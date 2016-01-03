@@ -211,14 +211,14 @@
           <div class="sort__selector">Сортировать по</div>
           <div class="sort__view"> <span class="view__heading">Вид каталога</span>
             <ul class="view__list">
-              <li class="view__item"><a href="#" title="title" class="view__item_link view__item_link1"></a></li>
-              <li class="view__item"><a href="#" title="title" class="view__item_link view__item_link2"></a></li>
-              <li class="view__item"><a href="#" title="title" class="view__item_link view__item_link3"></a></li>
+              <li data-view="rows" class="view__item view__item_rows"><a href="#" class="view__item_link view__item_link-rows"></a></li>
+              <li data-view="grids" class="view__item view__item_grids"><a href="#" class="view__item_link view__item_link-grids"></a></li>
+              <li data-view="lines" class="view__item view__item_lines"><a href="#" class="view__item_link view__item_link-lines"></a></li>
             </ul>
           </div>
         </div>
         <div class="products">
-          <ul class="products__list">
+          <ul id="products-list" class="products__list">
             <li class="products__item">
               <div class="products__item_inner">
                 <div class="products__left">
@@ -232,20 +232,46 @@
                     </div>
                     <div class="products__article">
                       <div class="products__article-word">Артикул</div>
-                      <div class="products__article-num">189232</div>
+                      <div class="products__article-num">189238</div>
                     </div>
                   </div>
                   <div class="products__desc">
-                    <div class="products__desc-title">Samsung FT-19301</div>
+                    <div class="products__desc-title">Смартфон Samsung GT-I9301I GALAXY S 3 </div>
                     <ul class="products__desc-options">
-                      <li class="products__option-item">Тип SIM-карты</li>
-                      <li class="products__option-value">Micro-SIM</li>
+                      <li class="products__option-item products__option-item_colored">
+                        <div class="products__option-key">Тип SIM-карты</div>
+                        <div class="products__option-value">Micro-SIM</div>
+                      </li>
+                      <li class="products__option-item">
+                        <div class="products__option-key">Количество SIM-карт</div>
+                        <div class="products__option-value">2</div>
+                      </li>
+                      <li class="products__option-item products__option-item_colored">
+                        <div class="products__option-key">Цвет</div>
+                        <div class="products__option-value">Белый</div>
+                      </li>
+                      <li class="products__option-item">
+                        <div class="products__option-key">ОС</div>
+                        <div class="products__option-value">Windows Phone</div>
+                      </li>
+                      <li class="products__option-item products__option-item_colored">
+                        <div class="products__option-key">Связь 3G</div>
+                        <div class="products__option-value">Есть</div>
+                      </li>
+                      <li class="products__option-item">
+                        <div class="products__option-key">4G (LTE)</div>
+                        <div class="products__option-value">Нет</div>
+                      </li>
+                      <li class="products__option-item products__option-item_colored">
+                        <div class="products__option-key">GPS-модуль</div>
+                        <div class="products__option-value">A-GPS</div>
+                      </li>
                     </ul>
                     <div class="products__rating">
                       <ul class="products__rating-stars">
-                        <li class="products__rating-stars-item products__rating-stars-filled">    </li>
-                        <li class="products__rating-stars-item products__rating-stars-filled">    </li>
-                        <li class="products__rating-stars-item products__rating-stars-filled">    </li>
+                        <li class="products__rating-stars-item products__rating-stars-item_filled">    </li>
+                        <li class="products__rating-stars-item products__rating-stars-item_filled">    </li>
+                        <li class="products__rating-stars-item products__rating-stars-item_filled">    </li>
                         <li class="products__rating-stars-item"></li>
                         <li class="products__rating-stars-item"></li>
                       </ul>
@@ -276,20 +302,46 @@
                     </div>
                     <div class="products__article">
                       <div class="products__article-word">Артикул</div>
-                      <div class="products__article-num">189232</div>
+                      <div class="products__article-num">189238</div>
                     </div>
                   </div>
                   <div class="products__desc">
-                    <div class="products__desc-title">Samsung FT-19301</div>
+                    <div class="products__desc-title">Смартфон Samsung GT-I9301I GALAXY S 3 </div>
                     <ul class="products__desc-options">
-                      <li class="products__option-item">Тип SIM-карты</li>
-                      <li class="products__option-value">Micro-SIM</li>
+                      <li class="products__option-item products__option-item_colored">
+                        <div class="products__option-key">Тип SIM-карты</div>
+                        <div class="products__option-value">Micro-SIM</div>
+                      </li>
+                      <li class="products__option-item">
+                        <div class="products__option-key">Количество SIM-карт</div>
+                        <div class="products__option-value">2</div>
+                      </li>
+                      <li class="products__option-item products__option-item_colored">
+                        <div class="products__option-key">Цвет</div>
+                        <div class="products__option-value">Белый</div>
+                      </li>
+                      <li class="products__option-item">
+                        <div class="products__option-key">ОС</div>
+                        <div class="products__option-value">Windows Phone</div>
+                      </li>
+                      <li class="products__option-item products__option-item_colored">
+                        <div class="products__option-key">Связь 3G</div>
+                        <div class="products__option-value">Есть</div>
+                      </li>
+                      <li class="products__option-item">
+                        <div class="products__option-key">4G (LTE)</div>
+                        <div class="products__option-value">Нет</div>
+                      </li>
+                      <li class="products__option-item products__option-item_colored">
+                        <div class="products__option-key">GPS-модуль</div>
+                        <div class="products__option-value">A-GPS</div>
+                      </li>
                     </ul>
                     <div class="products__rating">
                       <ul class="products__rating-stars">
-                        <li class="products__rating-stars-item products__rating-stars-filled">    </li>
-                        <li class="products__rating-stars-item products__rating-stars-filled">    </li>
-                        <li class="products__rating-stars-item products__rating-stars-filled">    </li>
+                        <li class="products__rating-stars-item products__rating-stars-item_filled">    </li>
+                        <li class="products__rating-stars-item products__rating-stars-item_filled">    </li>
+                        <li class="products__rating-stars-item products__rating-stars-item_filled">    </li>
                         <li class="products__rating-stars-item"></li>
                         <li class="products__rating-stars-item"></li>
                       </ul>
@@ -320,20 +372,46 @@
                     </div>
                     <div class="products__article">
                       <div class="products__article-word">Артикул</div>
-                      <div class="products__article-num">189232</div>
+                      <div class="products__article-num">189238</div>
                     </div>
                   </div>
                   <div class="products__desc">
-                    <div class="products__desc-title">Samsung FT-19301</div>
+                    <div class="products__desc-title">Смартфон Samsung GT-I9301I GALAXY S 3 </div>
                     <ul class="products__desc-options">
-                      <li class="products__option-item">Тип SIM-карты</li>
-                      <li class="products__option-value">Micro-SIM</li>
+                      <li class="products__option-item products__option-item_colored">
+                        <div class="products__option-key">Тип SIM-карты</div>
+                        <div class="products__option-value">Micro-SIM</div>
+                      </li>
+                      <li class="products__option-item">
+                        <div class="products__option-key">Количество SIM-карт</div>
+                        <div class="products__option-value">2</div>
+                      </li>
+                      <li class="products__option-item products__option-item_colored">
+                        <div class="products__option-key">Цвет</div>
+                        <div class="products__option-value">Белый</div>
+                      </li>
+                      <li class="products__option-item">
+                        <div class="products__option-key">ОС</div>
+                        <div class="products__option-value">Windows Phone</div>
+                      </li>
+                      <li class="products__option-item products__option-item_colored">
+                        <div class="products__option-key">Связь 3G</div>
+                        <div class="products__option-value">Есть</div>
+                      </li>
+                      <li class="products__option-item">
+                        <div class="products__option-key">4G (LTE)</div>
+                        <div class="products__option-value">Нет</div>
+                      </li>
+                      <li class="products__option-item products__option-item_colored">
+                        <div class="products__option-key">GPS-модуль</div>
+                        <div class="products__option-value">A-GPS</div>
+                      </li>
                     </ul>
                     <div class="products__rating">
                       <ul class="products__rating-stars">
-                        <li class="products__rating-stars-item products__rating-stars-filled">    </li>
-                        <li class="products__rating-stars-item products__rating-stars-filled">    </li>
-                        <li class="products__rating-stars-item products__rating-stars-filled">    </li>
+                        <li class="products__rating-stars-item products__rating-stars-item_filled">    </li>
+                        <li class="products__rating-stars-item products__rating-stars-item_filled">    </li>
+                        <li class="products__rating-stars-item products__rating-stars-item_filled">    </li>
                         <li class="products__rating-stars-item"></li>
                         <li class="products__rating-stars-item"></li>
                       </ul>
@@ -364,20 +442,46 @@
                     </div>
                     <div class="products__article">
                       <div class="products__article-word">Артикул</div>
-                      <div class="products__article-num">189232</div>
+                      <div class="products__article-num">189238</div>
                     </div>
                   </div>
                   <div class="products__desc">
-                    <div class="products__desc-title">Samsung FT-19301</div>
+                    <div class="products__desc-title">Смартфон Samsung GT-I9301I GALAXY S 3 </div>
                     <ul class="products__desc-options">
-                      <li class="products__option-item">Тип SIM-карты</li>
-                      <li class="products__option-value">Micro-SIM</li>
+                      <li class="products__option-item products__option-item_colored">
+                        <div class="products__option-key">Тип SIM-карты</div>
+                        <div class="products__option-value">Micro-SIM</div>
+                      </li>
+                      <li class="products__option-item">
+                        <div class="products__option-key">Количество SIM-карт</div>
+                        <div class="products__option-value">2</div>
+                      </li>
+                      <li class="products__option-item products__option-item_colored">
+                        <div class="products__option-key">Цвет</div>
+                        <div class="products__option-value">Белый</div>
+                      </li>
+                      <li class="products__option-item">
+                        <div class="products__option-key">ОС</div>
+                        <div class="products__option-value">Windows Phone</div>
+                      </li>
+                      <li class="products__option-item products__option-item_colored">
+                        <div class="products__option-key">Связь 3G</div>
+                        <div class="products__option-value">Есть</div>
+                      </li>
+                      <li class="products__option-item">
+                        <div class="products__option-key">4G (LTE)</div>
+                        <div class="products__option-value">Нет</div>
+                      </li>
+                      <li class="products__option-item products__option-item_colored">
+                        <div class="products__option-key">GPS-модуль</div>
+                        <div class="products__option-value">A-GPS</div>
+                      </li>
                     </ul>
                     <div class="products__rating">
                       <ul class="products__rating-stars">
-                        <li class="products__rating-stars-item products__rating-stars-filled">    </li>
-                        <li class="products__rating-stars-item products__rating-stars-filled">    </li>
-                        <li class="products__rating-stars-item products__rating-stars-filled">    </li>
+                        <li class="products__rating-stars-item products__rating-stars-item_filled">    </li>
+                        <li class="products__rating-stars-item products__rating-stars-item_filled">    </li>
+                        <li class="products__rating-stars-item products__rating-stars-item_filled">    </li>
                         <li class="products__rating-stars-item"></li>
                         <li class="products__rating-stars-item"></li>
                       </ul>
@@ -408,20 +512,46 @@
                     </div>
                     <div class="products__article">
                       <div class="products__article-word">Артикул</div>
-                      <div class="products__article-num">189232</div>
+                      <div class="products__article-num">189238</div>
                     </div>
                   </div>
                   <div class="products__desc">
-                    <div class="products__desc-title">Samsung FT-19301</div>
+                    <div class="products__desc-title">Смартфон Samsung GT-I9301I GALAXY S 3 </div>
                     <ul class="products__desc-options">
-                      <li class="products__option-item">Тип SIM-карты</li>
-                      <li class="products__option-value">Micro-SIM</li>
+                      <li class="products__option-item products__option-item_colored">
+                        <div class="products__option-key">Тип SIM-карты</div>
+                        <div class="products__option-value">Micro-SIM</div>
+                      </li>
+                      <li class="products__option-item">
+                        <div class="products__option-key">Количество SIM-карт</div>
+                        <div class="products__option-value">2</div>
+                      </li>
+                      <li class="products__option-item products__option-item_colored">
+                        <div class="products__option-key">Цвет</div>
+                        <div class="products__option-value">Белый</div>
+                      </li>
+                      <li class="products__option-item">
+                        <div class="products__option-key">ОС</div>
+                        <div class="products__option-value">Windows Phone</div>
+                      </li>
+                      <li class="products__option-item products__option-item_colored">
+                        <div class="products__option-key">Связь 3G</div>
+                        <div class="products__option-value">Есть</div>
+                      </li>
+                      <li class="products__option-item">
+                        <div class="products__option-key">4G (LTE)</div>
+                        <div class="products__option-value">Нет</div>
+                      </li>
+                      <li class="products__option-item products__option-item_colored">
+                        <div class="products__option-key">GPS-модуль</div>
+                        <div class="products__option-value">A-GPS</div>
+                      </li>
                     </ul>
                     <div class="products__rating">
                       <ul class="products__rating-stars">
-                        <li class="products__rating-stars-item products__rating-stars-filled">    </li>
-                        <li class="products__rating-stars-item products__rating-stars-filled">    </li>
-                        <li class="products__rating-stars-item products__rating-stars-filled">    </li>
+                        <li class="products__rating-stars-item products__rating-stars-item_filled">    </li>
+                        <li class="products__rating-stars-item products__rating-stars-item_filled">    </li>
+                        <li class="products__rating-stars-item products__rating-stars-item_filled">    </li>
                         <li class="products__rating-stars-item"></li>
                         <li class="products__rating-stars-item"></li>
                       </ul>
@@ -452,20 +582,46 @@
                     </div>
                     <div class="products__article">
                       <div class="products__article-word">Артикул</div>
-                      <div class="products__article-num">189232</div>
+                      <div class="products__article-num">189238</div>
                     </div>
                   </div>
                   <div class="products__desc">
-                    <div class="products__desc-title">Samsung FT-19301</div>
+                    <div class="products__desc-title">Смартфон Samsung GT-I9301I GALAXY S 3 </div>
                     <ul class="products__desc-options">
-                      <li class="products__option-item">Тип SIM-карты</li>
-                      <li class="products__option-value">Micro-SIM</li>
+                      <li class="products__option-item products__option-item_colored">
+                        <div class="products__option-key">Тип SIM-карты</div>
+                        <div class="products__option-value">Micro-SIM</div>
+                      </li>
+                      <li class="products__option-item">
+                        <div class="products__option-key">Количество SIM-карт</div>
+                        <div class="products__option-value">2</div>
+                      </li>
+                      <li class="products__option-item products__option-item_colored">
+                        <div class="products__option-key">Цвет</div>
+                        <div class="products__option-value">Белый</div>
+                      </li>
+                      <li class="products__option-item">
+                        <div class="products__option-key">ОС</div>
+                        <div class="products__option-value">Windows Phone</div>
+                      </li>
+                      <li class="products__option-item products__option-item_colored">
+                        <div class="products__option-key">Связь 3G</div>
+                        <div class="products__option-value">Есть</div>
+                      </li>
+                      <li class="products__option-item">
+                        <div class="products__option-key">4G (LTE)</div>
+                        <div class="products__option-value">Нет</div>
+                      </li>
+                      <li class="products__option-item products__option-item_colored">
+                        <div class="products__option-key">GPS-модуль</div>
+                        <div class="products__option-value">A-GPS</div>
+                      </li>
                     </ul>
                     <div class="products__rating">
                       <ul class="products__rating-stars">
-                        <li class="products__rating-stars-item products__rating-stars-filled">    </li>
-                        <li class="products__rating-stars-item products__rating-stars-filled">    </li>
-                        <li class="products__rating-stars-item products__rating-stars-filled">    </li>
+                        <li class="products__rating-stars-item products__rating-stars-item_filled">    </li>
+                        <li class="products__rating-stars-item products__rating-stars-item_filled">    </li>
+                        <li class="products__rating-stars-item products__rating-stars-item_filled">    </li>
                         <li class="products__rating-stars-item"></li>
                         <li class="products__rating-stars-item"></li>
                       </ul>
@@ -496,20 +652,46 @@
                     </div>
                     <div class="products__article">
                       <div class="products__article-word">Артикул</div>
-                      <div class="products__article-num">189232</div>
+                      <div class="products__article-num">189238</div>
                     </div>
                   </div>
                   <div class="products__desc">
-                    <div class="products__desc-title">Samsung FT-19301</div>
+                    <div class="products__desc-title">Смартфон Samsung GT-I9301I GALAXY S 3 </div>
                     <ul class="products__desc-options">
-                      <li class="products__option-item">Тип SIM-карты</li>
-                      <li class="products__option-value">Micro-SIM</li>
+                      <li class="products__option-item products__option-item_colored">
+                        <div class="products__option-key">Тип SIM-карты</div>
+                        <div class="products__option-value">Micro-SIM</div>
+                      </li>
+                      <li class="products__option-item">
+                        <div class="products__option-key">Количество SIM-карт</div>
+                        <div class="products__option-value">2</div>
+                      </li>
+                      <li class="products__option-item products__option-item_colored">
+                        <div class="products__option-key">Цвет</div>
+                        <div class="products__option-value">Белый</div>
+                      </li>
+                      <li class="products__option-item">
+                        <div class="products__option-key">ОС</div>
+                        <div class="products__option-value">Windows Phone</div>
+                      </li>
+                      <li class="products__option-item products__option-item_colored">
+                        <div class="products__option-key">Связь 3G</div>
+                        <div class="products__option-value">Есть</div>
+                      </li>
+                      <li class="products__option-item">
+                        <div class="products__option-key">4G (LTE)</div>
+                        <div class="products__option-value">Нет</div>
+                      </li>
+                      <li class="products__option-item products__option-item_colored">
+                        <div class="products__option-key">GPS-модуль</div>
+                        <div class="products__option-value">A-GPS</div>
+                      </li>
                     </ul>
                     <div class="products__rating">
                       <ul class="products__rating-stars">
-                        <li class="products__rating-stars-item products__rating-stars-filled">    </li>
-                        <li class="products__rating-stars-item products__rating-stars-filled">    </li>
-                        <li class="products__rating-stars-item products__rating-stars-filled">    </li>
+                        <li class="products__rating-stars-item products__rating-stars-item_filled">    </li>
+                        <li class="products__rating-stars-item products__rating-stars-item_filled">    </li>
+                        <li class="products__rating-stars-item products__rating-stars-item_filled">    </li>
                         <li class="products__rating-stars-item"></li>
                         <li class="products__rating-stars-item"></li>
                       </ul>
@@ -540,20 +722,46 @@
                     </div>
                     <div class="products__article">
                       <div class="products__article-word">Артикул</div>
-                      <div class="products__article-num">189232</div>
+                      <div class="products__article-num">189238</div>
                     </div>
                   </div>
                   <div class="products__desc">
-                    <div class="products__desc-title">Samsung FT-19301</div>
+                    <div class="products__desc-title">Смартфон Samsung GT-I9301I GALAXY S 3 </div>
                     <ul class="products__desc-options">
-                      <li class="products__option-item">Тип SIM-карты</li>
-                      <li class="products__option-value">Micro-SIM</li>
+                      <li class="products__option-item products__option-item_colored">
+                        <div class="products__option-key">Тип SIM-карты</div>
+                        <div class="products__option-value">Micro-SIM</div>
+                      </li>
+                      <li class="products__option-item">
+                        <div class="products__option-key">Количество SIM-карт</div>
+                        <div class="products__option-value">2</div>
+                      </li>
+                      <li class="products__option-item products__option-item_colored">
+                        <div class="products__option-key">Цвет</div>
+                        <div class="products__option-value">Белый</div>
+                      </li>
+                      <li class="products__option-item">
+                        <div class="products__option-key">ОС</div>
+                        <div class="products__option-value">Windows Phone</div>
+                      </li>
+                      <li class="products__option-item products__option-item_colored">
+                        <div class="products__option-key">Связь 3G</div>
+                        <div class="products__option-value">Есть</div>
+                      </li>
+                      <li class="products__option-item">
+                        <div class="products__option-key">4G (LTE)</div>
+                        <div class="products__option-value">Нет</div>
+                      </li>
+                      <li class="products__option-item products__option-item_colored">
+                        <div class="products__option-key">GPS-модуль</div>
+                        <div class="products__option-value">A-GPS</div>
+                      </li>
                     </ul>
                     <div class="products__rating">
                       <ul class="products__rating-stars">
-                        <li class="products__rating-stars-item products__rating-stars-filled">    </li>
-                        <li class="products__rating-stars-item products__rating-stars-filled">    </li>
-                        <li class="products__rating-stars-item products__rating-stars-filled">    </li>
+                        <li class="products__rating-stars-item products__rating-stars-item_filled">    </li>
+                        <li class="products__rating-stars-item products__rating-stars-item_filled">    </li>
+                        <li class="products__rating-stars-item products__rating-stars-item_filled">    </li>
                         <li class="products__rating-stars-item"></li>
                         <li class="products__rating-stars-item"></li>
                       </ul>
@@ -584,20 +792,46 @@
                     </div>
                     <div class="products__article">
                       <div class="products__article-word">Артикул</div>
-                      <div class="products__article-num">189232</div>
+                      <div class="products__article-num">189238</div>
                     </div>
                   </div>
                   <div class="products__desc">
-                    <div class="products__desc-title">Samsung FT-19301</div>
+                    <div class="products__desc-title">Смартфон Samsung GT-I9301I GALAXY S 3 </div>
                     <ul class="products__desc-options">
-                      <li class="products__option-item">Тип SIM-карты</li>
-                      <li class="products__option-value">Micro-SIM</li>
+                      <li class="products__option-item products__option-item_colored">
+                        <div class="products__option-key">Тип SIM-карты</div>
+                        <div class="products__option-value">Micro-SIM</div>
+                      </li>
+                      <li class="products__option-item">
+                        <div class="products__option-key">Количество SIM-карт</div>
+                        <div class="products__option-value">2</div>
+                      </li>
+                      <li class="products__option-item products__option-item_colored">
+                        <div class="products__option-key">Цвет</div>
+                        <div class="products__option-value">Белый</div>
+                      </li>
+                      <li class="products__option-item">
+                        <div class="products__option-key">ОС</div>
+                        <div class="products__option-value">Windows Phone</div>
+                      </li>
+                      <li class="products__option-item products__option-item_colored">
+                        <div class="products__option-key">Связь 3G</div>
+                        <div class="products__option-value">Есть</div>
+                      </li>
+                      <li class="products__option-item">
+                        <div class="products__option-key">4G (LTE)</div>
+                        <div class="products__option-value">Нет</div>
+                      </li>
+                      <li class="products__option-item products__option-item_colored">
+                        <div class="products__option-key">GPS-модуль</div>
+                        <div class="products__option-value">A-GPS</div>
+                      </li>
                     </ul>
                     <div class="products__rating">
                       <ul class="products__rating-stars">
-                        <li class="products__rating-stars-item products__rating-stars-filled">    </li>
-                        <li class="products__rating-stars-item products__rating-stars-filled">    </li>
-                        <li class="products__rating-stars-item products__rating-stars-filled">    </li>
+                        <li class="products__rating-stars-item products__rating-stars-item_filled">    </li>
+                        <li class="products__rating-stars-item products__rating-stars-item_filled">    </li>
+                        <li class="products__rating-stars-item products__rating-stars-item_filled">    </li>
                         <li class="products__rating-stars-item"></li>
                         <li class="products__rating-stars-item"></li>
                       </ul>
@@ -666,7 +900,10 @@
           <li class="navigation__item navigation__item_footer"><a href="#" class="navigation__link navigation__link_footer">Бытовая техника</a></li>
         </ul>
       </nav>
-      <div class="copyright copyright_footer"><span class="copyright__span">All rights reserved. 2015. No copy allowed</span></div>
+      <div class="copyright copyright_footer"><span class="copyright__span">All rights reserved. 2015. No copy allowed</span></div><script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script><script>window.jQuery || document.write('<script src="/js/_vendor/jquery-1.11.0.min.js"><\/script>');
+      </script>
+      <script src="js/main.js"></script>
+      <script src="js/changeView.js"></script>
     </div>
   </footer>
 </body>

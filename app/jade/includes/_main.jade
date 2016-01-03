@@ -4,14 +4,12 @@ section.main
     div(class="sort__view") 
       span.view__heading Вид каталога
       ul.view__list
-        li(class="view__item")
-          a(href='#', title="title" class="view__item_link view__item_link1")
-        li(class="view__item")
-          a(href='#', title="title" class="view__item_link view__item_link2")
-        li(class="view__item")
-          a(href='#', title="title" class="view__item_link view__item_link3")
+        - var items = ['rows', 'grids', 'lines']
+        each item in items
+          li(class="view__item view__item_" + item data-view="#{item}")
+            a(href="#" class="view__item_link view__item_link-" + item)
   .products
-    ul.products__list
+    ul.products__list#products-list
       - for (var i = 0; i < 9; i++ )
         li.products__item
           .products__item_inner
@@ -27,19 +25,21 @@ section.main
                           img(src="http://lorempixel.com/45/45/technics/" + j alt="").products__slideshow-thumb-img
                 .products__article
                   .products__article-word Артикул
-                  .products__article-num 189232
+                  .products__article-num 189238
               .products__desc
-                .products__desc-title Samsung FT-19301
+                .products__desc-title Смартфон Samsung GT-I9301I GALAXY S 3 
                 ul.products__desc-options
-                  - var options = {'Тип SIM-карты': 'Micro-SIM'};
-                  each value, key in options
-                    li.products__option-item= key
-                    li.products__option-value= value
+                  - var options = {'Тип SIM-карты': 'Micro-SIM', 'Количество SIM-карт': '2', 'Цвет': 'Белый', 'ОС': 'Windows Phone', 'Связь 3G': 'Есть', '4G (LTE)': 'Нет', 'GPS-модуль': 'A-GPS'};
+                  - var index = 0;
+                  - for (item in options)
+                    li(class="products__option-item" + (!(index++ % 2) ? ' products__option-item_colored' : ''))
+                      .products__option-key= item
+                      .products__option-value= options[item]
                 .products__rating
                   ul.products__rating-stars
-                    li.products__rating-stars-item.products__rating-stars-filled     
-                    li.products__rating-stars-item.products__rating-stars-filled     
-                    li.products__rating-stars-item.products__rating-stars-filled     
+                    li.products__rating-stars-item.products__rating-stars-item_filled     
+                    li.products__rating-stars-item.products__rating-stars-item_filled     
+                    li.products__rating-stars-item.products__rating-stars-item_filled     
                     li.products__rating-stars-item
                     li.products__rating-stars-item
                   .products__rating-amount 3

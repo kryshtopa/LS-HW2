@@ -1,4 +1,5 @@
 @import "icons/pagination/*.png";
+@import "icons/rating/*.png";
 
 .sort {
 	background-color: #e4ebee;
@@ -45,13 +46,13 @@
 	  margin: 18px;
 		height: 16px;
 		width: 16px;
-		&1 {
+		&-lines {
 			@include sort-sprite(view-li);
 		}
-		&2 {
+		&-rows {
 			@include sort-sprite(view-ic);
 		}
-		&3 {
+		&-grids {
 			@include sort-sprite(view-tm);
 		}
 	}
@@ -92,7 +93,7 @@
 	float: left;
 }
 .products__slideshow-block {
-	margin-bottom: 14px;
+	margin-bottom: 8px;
 }
 .products__slideshow-display {
 	width: 134px;
@@ -136,15 +137,23 @@
 	max-height: 85%;
 	@include absolute-center;
 }
+.products__article {
+	text-align: center;
+	padding-right: 8px;
+}
 .products__article-word {
+	@include inlineblock;
 	font-size: 12px;
 	line-height: 16px;
-	color: #bbb;
+	color: #333;
+  font-family: OpenSans-Semibold;
 }
 .products__article-num {
-	font-style: 14px;
+	@include inlineblock;
+	font-size: 14px;
 	line-height: 16px;
-	color: #bbb;
+  font-family: OpenSans-Semibold;
+	color: #333;
 }
 
 .products__desc {
@@ -153,30 +162,66 @@
 	margin-left: 21px;
 }
 .products__desc-title {
-	font-style: 16px;
+	font-size: 16px;
 	margin-bottom: 20px;
 	padding-top: 7px;
 }
 
 .products__desc-options {
 	margin-bottom: 14px;
+	font-size: 14px;
+	line-height: 20px;
+	font-family: OpenSans-Regular;
 }
+.products__option-item {
+	background: transparent;
+}
+.products__option-item_colored {
+	background: transparent;
+}
+
 .products__option-key {
 	display: inline;
-	font-style: 14px;
+	font-size: 14px;
 	line-height: 16px;
 }
 .products__option-value {
 	display: inline;
-	font-style: 14px;
+	font-size: 14px;
 	line-height: 16px;
 }
 
 
-.products__ratins-stars-item {
+.products__rating-stars-item {
+	@include inlineblock;
+	vertical-align: middle;
+	@include rating-sprite(star);
+	width: 16px;
+	height: 16px;
 
+		&.products__rating-stars-item_filled {
+			@include rating-sprite(star-c);
+		}
 }
-
+.products__rating-stars {
+	@include inlineblock;
+	vertical-align: middle;
+	padding-top: 3px;
+}
+.products__rating-amount {
+	@include inlineblock;
+	vertical-align: middle;
+	color: #fbfbfb;
+	font-size: 12px;
+	line-height: 15px;
+	width: 30px;
+	background: #b5beca;
+	border-radius: 20px;
+	margin-left: 8px;
+	text-align: center;
+	padding-top: 1px;
+	margin-top: 5px;
+}
 
 
 .products__right {
@@ -184,7 +229,7 @@
 	top: 23px;
 	bottom: 23px;
 	right: 23px;
-	width: 123px;
+	width: 130px;
 	text-align: right;
 }
 .products__info {
@@ -196,11 +241,18 @@
 	position: absolute;
 	bottom: 0;
 	right: 0;
+	padding: 0 3px 8px 0;
 }
+.products__price {
+	font-size: 20px;
+	font-family: OpenSans-Semibold;
+	line-height: 20px;
+}
+
 .products__buy-btn {
 	@include inlineblock();
 	text-decoration: none;
-	padding: 9px 13px;
+	padding: 6px 13px;
 	font-family: OpenSans-Bold;
 	font-size: 14px;
 	border-radius: 4px;
@@ -227,7 +279,7 @@
 		border-radius: 50%;
 		background-color: green;
 		@include inlineblock;
-		margin-right: 8px;
+		margin-right: 7px;
 		vertical-align: middle;
 	}
 }
