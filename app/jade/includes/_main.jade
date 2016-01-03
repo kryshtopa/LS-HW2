@@ -1,10 +1,64 @@
 section.main
-  header.main__header
-  ul.main__list
-    li.main__list
-      div.item_articul Артикул: 189238
-      div.item_name Смартфон Samsung Lorem ipsum dolor sit amet, consectetur
-      div.item_price 19000
-      div.item_stock в наличии
-      div.item_basket: button В корзину
-      
+  div(class="sort main__sort")
+    div(class="sort__selector") Сортировать по
+    div(class="sort__view") 
+      span.view__heading Вид каталога
+      ul.view__list
+        li(class="view__item")
+          a(href='#', title="title" class="view__item_link view__item_link1")
+        li(class="view__item")
+          a(href='#', title="title" class="view__item_link view__item_link2")
+        li(class="view__item")
+          a(href='#', title="title" class="view__item_link view__item_link3")
+  .products
+    ul.products__list
+      - for (var i = 0; i < 9; i++ )
+        li.products__item
+          .products__item_inner
+            .products__left
+              .products__slideshow
+                .products__slideshow-block 
+                  a(href="#").products__slideshow-display
+                    img.products__slideshow-img(src="http://lorempixel.com/150/150" alt="")
+                  ul.products__slideshow-thumbs
+                    - for( var j = 0; j < 3; j++ )
+                      li.products__slideshow-item
+                        a(href='#').products__slideshow-link
+                          img(src="http://lorempixel.com/45/45/technics/" + j alt="").products__slideshow-thumb-img
+                .products__article
+                  .products__article-word Артикул
+                  .products__article-num 189232
+              .products__desc
+                .products__desc-title Samsung FT-19301
+                ul.products__desc-options
+                  - var options = {'Тип SIM-карты': 'Micro-SIM'};
+                  each value, key in options
+                    li.products__option-item= key
+                    li.products__option-value= value
+                .products__rating
+                  ul.products__rating-stars
+                    li.products__rating-stars-item.products__rating-stars-filled     
+                    li.products__rating-stars-item.products__rating-stars-filled     
+                    li.products__rating-stars-item.products__rating-stars-filled     
+                    li.products__rating-stars-item
+                    li.products__rating-stars-item
+                  .products__rating-amount 3
+            .products__right
+              .products__info
+                .products__price 11290
+                  i.rub
+              .products__info-bottom
+                a(href='#').products__buy-btn В корзину
+                .products__aviability В наличии
+  .pagination
+    ul.pagination__list
+      li.pagination__item.pagination__item_prev
+        a(href='#').pagination__link
+          .pagination__mark
+      - for( var i = 1; i < 4; i++ )
+        li.pagination__item
+          a(href='#').pagination__link
+            .pagination__mark= i
+      li.pagination__item.pagination__item_next
+        a(href='#').pagination__link
+          .pagination__mark

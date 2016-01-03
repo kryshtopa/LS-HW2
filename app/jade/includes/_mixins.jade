@@ -3,6 +3,17 @@ mixin menu(items, menuClass)
     each item in items
       li(class="#{menuClass}__item"): a(href="#" class="#{menuClass}__link #{menuClass}__link_#{item}") #{item}
 
+mixin menuSocial(items, menuClass, mod)
+  div(class="#{menuClass} #{menuClass}_#{mod}")
+    ul(class="#{menuClass}__list")
+      each item in items
+        li(class="#{menuClass}__item #{menuClass}__item_#{mod}"): a(href="#" class="#{menuClass}__link #{menuClass}__link_#{mod} #{menuClass}__link_#{mod}-#{item}") #{item}
+
+mixin menuNav(items, menuClass, mod)
+  ul(class="#{menuClass}__list #{menuClass}__list_#{mod}")
+    each item in items
+      li(class="#{menuClass}__item #{menuClass}__item_#{mod}"): a(href="#" class="#{menuClass}__link #{menuClass}__link_#{mod}") #{item}
+
 mixin menuCheckbox(items, menuClass)
   ul(class="#{menuClass}__list")
     each item in items

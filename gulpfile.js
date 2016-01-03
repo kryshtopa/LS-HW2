@@ -36,20 +36,20 @@ gulp.task('sass', function () {
 });
 
 gulp.task('jade', function() {
-    var YOUR_LOCALS = {};
+  var YOUR_LOCALS = {};
 
-    gulp.src('app/jade/*.jade')
-        .pipe(plumber())
-        .pipe(jade({
-            locals: YOUR_LOCALS,
-            pretty: true
-        }))
-        .pipe(gulp.dest('app/'))
+  gulp.src('app/jade/*.jade')
+    .pipe(plumber())
+    .pipe(jade({
+        locals: YOUR_LOCALS,
+        pretty: true
+    }))
+    .pipe(gulp.dest('app/'))
 });
 
 gulp.task('watch', function () {
     gulp.watch('app/sass/**/*.scss', ['sass']);
-    gulp.watch('app/jade/index.jade', ['jade']);
+    gulp.watch('app/jade/**/*.jade', ['jade']);
     gulp.watch([
         'app/*.html',
         'app/js/*.js',
@@ -58,4 +58,4 @@ gulp.task('watch', function () {
     //gulp.watch('bower.json', ['bower']);
 });
 
-gulp.task('default', ['server', 'watch']);
+gulp.task('default', ['server', 'watch', 'jade']);

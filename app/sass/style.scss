@@ -3,14 +3,15 @@
 @include sticky-footer(220px, ".wrapper", "#layout_footer", ".footer");
 
 
+@import "includes/mixins.scss";
 @import "includes/_header.scss";
 @import "includes/_aside.scss";
 @import "includes/_main.scss";
 @import "includes/_section.scss";
 @import "includes/_footer.scss";
+@import "includes/_navigation.scss";
 
 @import "includes/_socials.scss";
-
 
 
 
@@ -34,13 +35,32 @@ html, body {
   margin: 0 auto;
 }
 
-.container {
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+ul li {
+  padding: 0;
+  left: 0;
+  list-style: none outside none;
+}
+p {
+  padding: 0;
+  margin: 0;
 }
 
-
 .navigation__item,
-.menu__item, {
+.menu__item,
+.social__item {
 	display: inline-block;
+	margin-right: -4px;
+	&:last-child {
+		margin-right: 0;
+	}
 }
 
 .sidebar {
@@ -81,45 +101,8 @@ html, body {
 }
 
 
-.navigation_wide {
-  background-color: #fff;
-}
-.navigation__list {
-  padding: 0;
-  margin: 0;
-}
-.navigation__item {
-  padding: 20px;
-  font-size: 14px;
-  &:hover {
-    background-color: #e4e2e2;
-    color: #fff;
-  }
-}
-.navigation__link {
-  color: #333333;
-  font-size: 16px;
-  text-decoration: none;
-}
-
 
 .container__heading {
   padding: 30px 0;
   margin: 0;
-}
-
-
-.container:before,
-.container:after,
-.cf:before,
-.cf:after {
-    content: " ";
-    display: table;
-}
-.container:after,
-.cf:after {
-    clear: both;
-}
-.cf {
-    zoom: 1;
 }

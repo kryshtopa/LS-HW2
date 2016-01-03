@@ -1,3 +1,5 @@
+@import "icons/sort/*.png";
+
 .value-selector__list,
 .options__list,
 .options-block__list {
@@ -48,6 +50,7 @@
   }
 }
 .options-block__heading {
+  font-family: "OpenSans-Semibold";
   font-size: 16px;
   margin: 0;
   padding: 0;
@@ -55,6 +58,7 @@
 .options-block__list {
   margin: 17px 0;
   font-size: 14px;
+  font-family: "OpenSans-Regular";
 }
 .options-block__item {
   margin-top: 18px;
@@ -64,6 +68,36 @@
 }
 .options-block__reset {
   color: #5db2fc;
+  font-family: "OpenSans-Regular";
   font-size: 14px;
   text-decoration: underline;
+}
+
+
+
+
+.options-block__label input {
+    display: none;
+}
+.options-block__label span {
+    width: 19px;
+    height: 19px;
+    display: block;
+    @include sort-sprite(cb);
+
+}
+.options-block__label input:checked + span {
+    @include sort-sprite(cb-just-checked);
+    background-position: 0 -49px;    
+}
+.options-block__list .options-block__span {
+  padding-left: 30px;
+  width: 100%;
+}
+.options-block__label_radio span {
+    @include sort-sprite(radio-clean);
+    // background-position: 0 -66px
+}
+.options-block__label_radio input:checked + span {
+    @include sort-sprite(radio-check);
 }

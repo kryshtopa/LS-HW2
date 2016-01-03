@@ -15,38 +15,40 @@
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <!--Fonts-->
-  <link rel="stylesheet" href="fonts/OpenSans.css">
+  <link rel="stylesheet" href="css/fonts/stylesheet.css">
   <!--CSS-->
   <link rel="stylesheet" href="bower/normalize-css/normalize.css">
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="css/style.css">
   <!--modernizr-->
   <script src="bower/modernizer/modernizr.js"></script>
 </head>
 <body>
   <div class="wrapper">
     <header class="header">
-      <div class="header__row cf">
+      <div class="header__row">
         <div class="container">
-          <div class="social header__social header__social_float-left">
+          <div class="social social_header">
             <ul class="social__list">
-              <li class="social__item"><a href="#" class="social__link social__link_Facebook">Facebook</a></li>
-              <li class="social__item"><a href="#" class="social__link social__link_VK">VK</a></li>
-              <li class="social__item"><a href="#" class="social__link social__link_Twitter">Twitter</a></li>
+              <li class="social__item social__item_header"><a href="#" class="social__link social__link_header social__link_header-Facebook">Facebook</a></li>
+              <li class="social__item social__item_header"><a href="#" class="social__link social__link_header social__link_header-VK">VK</a></li>
+              <li class="social__item social__item_header"><a href="#" class="social__link social__link_header social__link_header-Twitter">Twitter</a></li>
             </ul>
           </div>
-          <div class="contacts contacts_float-right">
-            <div class="contacts__address contacts__address_float-left">ул. Маяковская 6, офис 17</div>
-            <div class="contacts__phone contacts__address_float-right">+7 (921) 123-12-13</div>
+          <div class="contacts contacts_header">
+            <ul class="contacts__list">
+              <li class="contacts__address">ул. Маяковская 6, офис 17</li>
+              <li class="contacts__phone">+7 (921) 123-12-13</li>
+            </ul>
           </div>
         </div>
       </div>
-      <div class="header__row header__row_colored cf">
+      <div class="header__row header__row_colored">
         <div class="container">
           <div class="logo logo_header"><a href="" class="logo__link"><img src="../img/logo.png" class="logo__img"></a></div>
           <div class="search search_header">
             <form class="form search__form">
-              <input type="search" placeholder="Что будем искать" class="search__input">
-              <input type="submit" class="search__button">
+              <input type="search" placeholder="Что будем искать" required class="search__input">
+              <input type="button" value="Найти" class="search__button">
             </form>
           </div>
           <div class="menu menu_header">
@@ -61,14 +63,14 @@
     </header>
     <nav class="navigation navigation_wide">
       <div class="container">
-        <ul class="navigation__list">
-          <li class="navigation__item"><a href="#" class="navigation__link navigation__link_Планшеты">Планшеты</a></li>
-          <li class="navigation__item"><a href="#" class="navigation__link navigation__link_Мобильные телефоны">Мобильные телефоны</a></li>
-          <li class="navigation__item"><a href="#" class="navigation__link navigation__link_Mp3 плееры">Mp3 плееры</a></li>
-          <li class="navigation__item"><a href="#" class="navigation__link navigation__link_Персональные компьютеры">Персональные компьютеры</a></li>
-          <li class="navigation__item"><a href="#" class="navigation__link navigation__link_Ноутбуки">Ноутбуки</a></li>
-          <li class="navigation__item"><a href="#" class="navigation__link navigation__link_Аксессуары">Аксессуары</a></li>
-          <li class="navigation__item"><a href="#" class="navigation__link navigation__link_Бытовая техника">Бытовая техника</a></li>
+        <ul class="navigation__list navigation__list_wide">
+          <li class="navigation__item navigation__item_wide"><a href="#" class="navigation__link navigation__link_wide">Планшеты</a></li>
+          <li class="navigation__item navigation__item_wide"><a href="#" class="navigation__link navigation__link_wide">Мобильные телефоны</a></li>
+          <li class="navigation__item navigation__item_wide"><a href="#" class="navigation__link navigation__link_wide">Mp3 плееры</a></li>
+          <li class="navigation__item navigation__item_wide"><a href="#" class="navigation__link navigation__link_wide">Персональные компьютеры</a></li>
+          <li class="navigation__item navigation__item_wide"><a href="#" class="navigation__link navigation__link_wide">Ноутбуки</a></li>
+          <li class="navigation__item navigation__item_wide"><a href="#" class="navigation__link navigation__link_wide">Аксессуары</a></li>
+          <li class="navigation__item navigation__item_wide"><a href="#" class="navigation__link navigation__link_wide">Бытовая техника</a></li>
         </ul>
       </div>
     </nav>
@@ -87,6 +89,18 @@
             <li class="options__item">
               <div class="options-block">
                 <h4 class="options-block__heading">Наличие в магазинах</h4>
+                <ul class="options-block__list">
+                  <li class="options-block__item">
+                    <label class="options-block__label options-block__label_radio">
+                      <input type="radio" value="closest-store" class="options-block__radio"><span class="options-block__span">Во всех магазинах</span>
+                    </label>
+                  </li>
+                  <li class="options-block__item">
+                    <label class="options-block__label options-block__label_radio">
+                      <input type="radio" value="closest-store" class="options-block__radio"><span class="options-block__span">В ближайшем ко мне магазине</span>
+                    </label>
+                  </li>
+                </ul>
               </div>
             </li>
             <li class="options__item">
@@ -193,18 +207,430 @@
         </div>
       </aside>
       <section class="main">
-        <header class="main__header"></header>
-        <ul class="main__list">
-          <li class="main__list">
-            <div class="item_articul">Артикул: 189238</div>
-            <div class="item_name">Смартфон Samsung Lorem ipsum dolor sit amet, consectetur</div>
-            <div class="item_price">19000</div>
-            <div class="item_stock">в наличии</div>
-            <div class="item_basket">
-              <button>В корзину</button>
-            </div>
-          </li>
-        </ul>
+        <div class="sort main__sort">
+          <div class="sort__selector">Сортировать по</div>
+          <div class="sort__view"> <span class="view__heading">Вид каталога</span>
+            <ul class="view__list">
+              <li class="view__item"><a href="#" title="title" class="view__item_link view__item_link1"></a></li>
+              <li class="view__item"><a href="#" title="title" class="view__item_link view__item_link2"></a></li>
+              <li class="view__item"><a href="#" title="title" class="view__item_link view__item_link3"></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="products">
+          <ul class="products__list">
+            <li class="products__item">
+              <div class="products__item_inner">
+                <div class="products__left">
+                  <div class="products__slideshow">
+                    <div class="products__slideshow-block"> <a href="#" class="products__slideshow-display"><img src="http://lorempixel.com/150/150" alt="" class="products__slideshow-img"></a>
+                      <ul class="products__slideshow-thumbs">
+                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/0" alt="" class="products__slideshow-thumb-img"></a></li>
+                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/1" alt="" class="products__slideshow-thumb-img"></a></li>
+                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/2" alt="" class="products__slideshow-thumb-img"></a></li>
+                      </ul>
+                    </div>
+                    <div class="products__article">
+                      <div class="products__article-word">Артикул</div>
+                      <div class="products__article-num">189232</div>
+                    </div>
+                  </div>
+                  <div class="products__desc">
+                    <div class="products__desc-title">Samsung FT-19301</div>
+                    <ul class="products__desc-options">
+                      <li class="products__option-item">Тип SIM-карты</li>
+                      <li class="products__option-value">Micro-SIM</li>
+                    </ul>
+                    <div class="products__rating">
+                      <ul class="products__rating-stars">
+                        <li class="products__rating-stars-item products__rating-stars-filled">    </li>
+                        <li class="products__rating-stars-item products__rating-stars-filled">    </li>
+                        <li class="products__rating-stars-item products__rating-stars-filled">    </li>
+                        <li class="products__rating-stars-item"></li>
+                        <li class="products__rating-stars-item"></li>
+                      </ul>
+                      <div class="products__rating-amount">3</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="products__right">
+                  <div class="products__info">
+                    <div class="products__price">11290<i class="rub"></i></div>
+                  </div>
+                  <div class="products__info-bottom"><a href="#" class="products__buy-btn">В корзину</a>
+                    <div class="products__aviability">В наличии</div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="products__item">
+              <div class="products__item_inner">
+                <div class="products__left">
+                  <div class="products__slideshow">
+                    <div class="products__slideshow-block"> <a href="#" class="products__slideshow-display"><img src="http://lorempixel.com/150/150" alt="" class="products__slideshow-img"></a>
+                      <ul class="products__slideshow-thumbs">
+                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/0" alt="" class="products__slideshow-thumb-img"></a></li>
+                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/1" alt="" class="products__slideshow-thumb-img"></a></li>
+                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/2" alt="" class="products__slideshow-thumb-img"></a></li>
+                      </ul>
+                    </div>
+                    <div class="products__article">
+                      <div class="products__article-word">Артикул</div>
+                      <div class="products__article-num">189232</div>
+                    </div>
+                  </div>
+                  <div class="products__desc">
+                    <div class="products__desc-title">Samsung FT-19301</div>
+                    <ul class="products__desc-options">
+                      <li class="products__option-item">Тип SIM-карты</li>
+                      <li class="products__option-value">Micro-SIM</li>
+                    </ul>
+                    <div class="products__rating">
+                      <ul class="products__rating-stars">
+                        <li class="products__rating-stars-item products__rating-stars-filled">    </li>
+                        <li class="products__rating-stars-item products__rating-stars-filled">    </li>
+                        <li class="products__rating-stars-item products__rating-stars-filled">    </li>
+                        <li class="products__rating-stars-item"></li>
+                        <li class="products__rating-stars-item"></li>
+                      </ul>
+                      <div class="products__rating-amount">3</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="products__right">
+                  <div class="products__info">
+                    <div class="products__price">11290<i class="rub"></i></div>
+                  </div>
+                  <div class="products__info-bottom"><a href="#" class="products__buy-btn">В корзину</a>
+                    <div class="products__aviability">В наличии</div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="products__item">
+              <div class="products__item_inner">
+                <div class="products__left">
+                  <div class="products__slideshow">
+                    <div class="products__slideshow-block"> <a href="#" class="products__slideshow-display"><img src="http://lorempixel.com/150/150" alt="" class="products__slideshow-img"></a>
+                      <ul class="products__slideshow-thumbs">
+                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/0" alt="" class="products__slideshow-thumb-img"></a></li>
+                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/1" alt="" class="products__slideshow-thumb-img"></a></li>
+                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/2" alt="" class="products__slideshow-thumb-img"></a></li>
+                      </ul>
+                    </div>
+                    <div class="products__article">
+                      <div class="products__article-word">Артикул</div>
+                      <div class="products__article-num">189232</div>
+                    </div>
+                  </div>
+                  <div class="products__desc">
+                    <div class="products__desc-title">Samsung FT-19301</div>
+                    <ul class="products__desc-options">
+                      <li class="products__option-item">Тип SIM-карты</li>
+                      <li class="products__option-value">Micro-SIM</li>
+                    </ul>
+                    <div class="products__rating">
+                      <ul class="products__rating-stars">
+                        <li class="products__rating-stars-item products__rating-stars-filled">    </li>
+                        <li class="products__rating-stars-item products__rating-stars-filled">    </li>
+                        <li class="products__rating-stars-item products__rating-stars-filled">    </li>
+                        <li class="products__rating-stars-item"></li>
+                        <li class="products__rating-stars-item"></li>
+                      </ul>
+                      <div class="products__rating-amount">3</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="products__right">
+                  <div class="products__info">
+                    <div class="products__price">11290<i class="rub"></i></div>
+                  </div>
+                  <div class="products__info-bottom"><a href="#" class="products__buy-btn">В корзину</a>
+                    <div class="products__aviability">В наличии</div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="products__item">
+              <div class="products__item_inner">
+                <div class="products__left">
+                  <div class="products__slideshow">
+                    <div class="products__slideshow-block"> <a href="#" class="products__slideshow-display"><img src="http://lorempixel.com/150/150" alt="" class="products__slideshow-img"></a>
+                      <ul class="products__slideshow-thumbs">
+                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/0" alt="" class="products__slideshow-thumb-img"></a></li>
+                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/1" alt="" class="products__slideshow-thumb-img"></a></li>
+                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/2" alt="" class="products__slideshow-thumb-img"></a></li>
+                      </ul>
+                    </div>
+                    <div class="products__article">
+                      <div class="products__article-word">Артикул</div>
+                      <div class="products__article-num">189232</div>
+                    </div>
+                  </div>
+                  <div class="products__desc">
+                    <div class="products__desc-title">Samsung FT-19301</div>
+                    <ul class="products__desc-options">
+                      <li class="products__option-item">Тип SIM-карты</li>
+                      <li class="products__option-value">Micro-SIM</li>
+                    </ul>
+                    <div class="products__rating">
+                      <ul class="products__rating-stars">
+                        <li class="products__rating-stars-item products__rating-stars-filled">    </li>
+                        <li class="products__rating-stars-item products__rating-stars-filled">    </li>
+                        <li class="products__rating-stars-item products__rating-stars-filled">    </li>
+                        <li class="products__rating-stars-item"></li>
+                        <li class="products__rating-stars-item"></li>
+                      </ul>
+                      <div class="products__rating-amount">3</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="products__right">
+                  <div class="products__info">
+                    <div class="products__price">11290<i class="rub"></i></div>
+                  </div>
+                  <div class="products__info-bottom"><a href="#" class="products__buy-btn">В корзину</a>
+                    <div class="products__aviability">В наличии</div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="products__item">
+              <div class="products__item_inner">
+                <div class="products__left">
+                  <div class="products__slideshow">
+                    <div class="products__slideshow-block"> <a href="#" class="products__slideshow-display"><img src="http://lorempixel.com/150/150" alt="" class="products__slideshow-img"></a>
+                      <ul class="products__slideshow-thumbs">
+                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/0" alt="" class="products__slideshow-thumb-img"></a></li>
+                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/1" alt="" class="products__slideshow-thumb-img"></a></li>
+                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/2" alt="" class="products__slideshow-thumb-img"></a></li>
+                      </ul>
+                    </div>
+                    <div class="products__article">
+                      <div class="products__article-word">Артикул</div>
+                      <div class="products__article-num">189232</div>
+                    </div>
+                  </div>
+                  <div class="products__desc">
+                    <div class="products__desc-title">Samsung FT-19301</div>
+                    <ul class="products__desc-options">
+                      <li class="products__option-item">Тип SIM-карты</li>
+                      <li class="products__option-value">Micro-SIM</li>
+                    </ul>
+                    <div class="products__rating">
+                      <ul class="products__rating-stars">
+                        <li class="products__rating-stars-item products__rating-stars-filled">    </li>
+                        <li class="products__rating-stars-item products__rating-stars-filled">    </li>
+                        <li class="products__rating-stars-item products__rating-stars-filled">    </li>
+                        <li class="products__rating-stars-item"></li>
+                        <li class="products__rating-stars-item"></li>
+                      </ul>
+                      <div class="products__rating-amount">3</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="products__right">
+                  <div class="products__info">
+                    <div class="products__price">11290<i class="rub"></i></div>
+                  </div>
+                  <div class="products__info-bottom"><a href="#" class="products__buy-btn">В корзину</a>
+                    <div class="products__aviability">В наличии</div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="products__item">
+              <div class="products__item_inner">
+                <div class="products__left">
+                  <div class="products__slideshow">
+                    <div class="products__slideshow-block"> <a href="#" class="products__slideshow-display"><img src="http://lorempixel.com/150/150" alt="" class="products__slideshow-img"></a>
+                      <ul class="products__slideshow-thumbs">
+                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/0" alt="" class="products__slideshow-thumb-img"></a></li>
+                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/1" alt="" class="products__slideshow-thumb-img"></a></li>
+                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/2" alt="" class="products__slideshow-thumb-img"></a></li>
+                      </ul>
+                    </div>
+                    <div class="products__article">
+                      <div class="products__article-word">Артикул</div>
+                      <div class="products__article-num">189232</div>
+                    </div>
+                  </div>
+                  <div class="products__desc">
+                    <div class="products__desc-title">Samsung FT-19301</div>
+                    <ul class="products__desc-options">
+                      <li class="products__option-item">Тип SIM-карты</li>
+                      <li class="products__option-value">Micro-SIM</li>
+                    </ul>
+                    <div class="products__rating">
+                      <ul class="products__rating-stars">
+                        <li class="products__rating-stars-item products__rating-stars-filled">    </li>
+                        <li class="products__rating-stars-item products__rating-stars-filled">    </li>
+                        <li class="products__rating-stars-item products__rating-stars-filled">    </li>
+                        <li class="products__rating-stars-item"></li>
+                        <li class="products__rating-stars-item"></li>
+                      </ul>
+                      <div class="products__rating-amount">3</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="products__right">
+                  <div class="products__info">
+                    <div class="products__price">11290<i class="rub"></i></div>
+                  </div>
+                  <div class="products__info-bottom"><a href="#" class="products__buy-btn">В корзину</a>
+                    <div class="products__aviability">В наличии</div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="products__item">
+              <div class="products__item_inner">
+                <div class="products__left">
+                  <div class="products__slideshow">
+                    <div class="products__slideshow-block"> <a href="#" class="products__slideshow-display"><img src="http://lorempixel.com/150/150" alt="" class="products__slideshow-img"></a>
+                      <ul class="products__slideshow-thumbs">
+                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/0" alt="" class="products__slideshow-thumb-img"></a></li>
+                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/1" alt="" class="products__slideshow-thumb-img"></a></li>
+                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/2" alt="" class="products__slideshow-thumb-img"></a></li>
+                      </ul>
+                    </div>
+                    <div class="products__article">
+                      <div class="products__article-word">Артикул</div>
+                      <div class="products__article-num">189232</div>
+                    </div>
+                  </div>
+                  <div class="products__desc">
+                    <div class="products__desc-title">Samsung FT-19301</div>
+                    <ul class="products__desc-options">
+                      <li class="products__option-item">Тип SIM-карты</li>
+                      <li class="products__option-value">Micro-SIM</li>
+                    </ul>
+                    <div class="products__rating">
+                      <ul class="products__rating-stars">
+                        <li class="products__rating-stars-item products__rating-stars-filled">    </li>
+                        <li class="products__rating-stars-item products__rating-stars-filled">    </li>
+                        <li class="products__rating-stars-item products__rating-stars-filled">    </li>
+                        <li class="products__rating-stars-item"></li>
+                        <li class="products__rating-stars-item"></li>
+                      </ul>
+                      <div class="products__rating-amount">3</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="products__right">
+                  <div class="products__info">
+                    <div class="products__price">11290<i class="rub"></i></div>
+                  </div>
+                  <div class="products__info-bottom"><a href="#" class="products__buy-btn">В корзину</a>
+                    <div class="products__aviability">В наличии</div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="products__item">
+              <div class="products__item_inner">
+                <div class="products__left">
+                  <div class="products__slideshow">
+                    <div class="products__slideshow-block"> <a href="#" class="products__slideshow-display"><img src="http://lorempixel.com/150/150" alt="" class="products__slideshow-img"></a>
+                      <ul class="products__slideshow-thumbs">
+                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/0" alt="" class="products__slideshow-thumb-img"></a></li>
+                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/1" alt="" class="products__slideshow-thumb-img"></a></li>
+                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/2" alt="" class="products__slideshow-thumb-img"></a></li>
+                      </ul>
+                    </div>
+                    <div class="products__article">
+                      <div class="products__article-word">Артикул</div>
+                      <div class="products__article-num">189232</div>
+                    </div>
+                  </div>
+                  <div class="products__desc">
+                    <div class="products__desc-title">Samsung FT-19301</div>
+                    <ul class="products__desc-options">
+                      <li class="products__option-item">Тип SIM-карты</li>
+                      <li class="products__option-value">Micro-SIM</li>
+                    </ul>
+                    <div class="products__rating">
+                      <ul class="products__rating-stars">
+                        <li class="products__rating-stars-item products__rating-stars-filled">    </li>
+                        <li class="products__rating-stars-item products__rating-stars-filled">    </li>
+                        <li class="products__rating-stars-item products__rating-stars-filled">    </li>
+                        <li class="products__rating-stars-item"></li>
+                        <li class="products__rating-stars-item"></li>
+                      </ul>
+                      <div class="products__rating-amount">3</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="products__right">
+                  <div class="products__info">
+                    <div class="products__price">11290<i class="rub"></i></div>
+                  </div>
+                  <div class="products__info-bottom"><a href="#" class="products__buy-btn">В корзину</a>
+                    <div class="products__aviability">В наличии</div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="products__item">
+              <div class="products__item_inner">
+                <div class="products__left">
+                  <div class="products__slideshow">
+                    <div class="products__slideshow-block"> <a href="#" class="products__slideshow-display"><img src="http://lorempixel.com/150/150" alt="" class="products__slideshow-img"></a>
+                      <ul class="products__slideshow-thumbs">
+                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/0" alt="" class="products__slideshow-thumb-img"></a></li>
+                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/1" alt="" class="products__slideshow-thumb-img"></a></li>
+                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="http://lorempixel.com/45/45/technics/2" alt="" class="products__slideshow-thumb-img"></a></li>
+                      </ul>
+                    </div>
+                    <div class="products__article">
+                      <div class="products__article-word">Артикул</div>
+                      <div class="products__article-num">189232</div>
+                    </div>
+                  </div>
+                  <div class="products__desc">
+                    <div class="products__desc-title">Samsung FT-19301</div>
+                    <ul class="products__desc-options">
+                      <li class="products__option-item">Тип SIM-карты</li>
+                      <li class="products__option-value">Micro-SIM</li>
+                    </ul>
+                    <div class="products__rating">
+                      <ul class="products__rating-stars">
+                        <li class="products__rating-stars-item products__rating-stars-filled">    </li>
+                        <li class="products__rating-stars-item products__rating-stars-filled">    </li>
+                        <li class="products__rating-stars-item products__rating-stars-filled">    </li>
+                        <li class="products__rating-stars-item"></li>
+                        <li class="products__rating-stars-item"></li>
+                      </ul>
+                      <div class="products__rating-amount">3</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="products__right">
+                  <div class="products__info">
+                    <div class="products__price">11290<i class="rub"></i></div>
+                  </div>
+                  <div class="products__info-bottom"><a href="#" class="products__buy-btn">В корзину</a>
+                    <div class="products__aviability">В наличии</div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="pagination">
+          <ul class="pagination__list">
+            <li class="pagination__item pagination__item_prev"><a href="#" class="pagination__link">
+                <div class="pagination__mark"></div></a></li>
+            <li class="pagination__item"><a href="#" class="pagination__link">
+                <div class="pagination__mark">1</div></a></li>
+            <li class="pagination__item"><a href="#" class="pagination__link">
+                <div class="pagination__mark">2</div></a></li>
+            <li class="pagination__item"><a href="#" class="pagination__link">
+                <div class="pagination__mark">3</div></a></li>
+            <li class="pagination__item pagination__item_next"><a href="#" class="pagination__link">
+                <div class="pagination__mark"></div></a></li>
+          </ul>
+        </div>
       </section>
       <section class="information">
         <h3 class="information__heading">Важная информация</h3>
@@ -222,25 +648,25 @@
   <footer class="footer">
     <div class="footer__container">
       <div class="logo logo_footer float-left footer__logo_float-left"><a href="" class="logo__link"><img src="../img/logo-footer.png" class="logo__img"></a></div>
-      <div class="social footer__social footer__social_float-right">
+      <div class="social social_footer">
         <ul class="social__list">
-          <li class="social__item"><a href="#" class="social__link social__link_Facebook">Facebook</a></li>
-          <li class="social__item"><a href="#" class="social__link social__link_VK">VK</a></li>
-          <li class="social__item"><a href="#" class="social__link social__link_Twitter">Twitter</a></li>
+          <li class="social__item social__item_footer"><a href="#" class="social__link social__link_footer social__link_footer-Facebook">Facebook</a></li>
+          <li class="social__item social__item_footer"><a href="#" class="social__link social__link_footer social__link_footer-VK">VK</a></li>
+          <li class="social__item social__item_footer"><a href="#" class="social__link social__link_footer social__link_footer-Twitter">Twitter</a></li>
         </ul>
       </div>
-      <nav class="navigation footer__navigation footer__navigation_float-left">
-        <ul class="navigation__list">
-          <li class="navigation__item"><a href="#" class="navigation__link navigation__link_Планшеты">Планшеты</a></li>
-          <li class="navigation__item"><a href="#" class="navigation__link navigation__link_Мобильные телефоны">Мобильные телефоны</a></li>
-          <li class="navigation__item"><a href="#" class="navigation__link navigation__link_Mp3 плееры">Mp3 плееры</a></li>
-          <li class="navigation__item"><a href="#" class="navigation__link navigation__link_Персональные компьютеры">Персональные компьютеры</a></li>
-          <li class="navigation__item"><a href="#" class="navigation__link navigation__link_Ноутбуки">Ноутбуки</a></li>
-          <li class="navigation__item"><a href="#" class="navigation__link navigation__link_Аксессуары">Аксессуары</a></li>
-          <li class="navigation__item"><a href="#" class="navigation__link navigation__link_Бытовая техника">Бытовая техника</a></li>
+      <nav class="navigation navigation_footer">
+        <ul class="navigation__list navigation__list_footer">
+          <li class="navigation__item navigation__item_footer"><a href="#" class="navigation__link navigation__link_footer">Планшеты</a></li>
+          <li class="navigation__item navigation__item_footer"><a href="#" class="navigation__link navigation__link_footer">Мобильные телефоны</a></li>
+          <li class="navigation__item navigation__item_footer"><a href="#" class="navigation__link navigation__link_footer">Mp3 плееры</a></li>
+          <li class="navigation__item navigation__item_footer"><a href="#" class="navigation__link navigation__link_footer">Персональные компьютеры</a></li>
+          <li class="navigation__item navigation__item_footer"><a href="#" class="navigation__link navigation__link_footer">Ноутбуки</a></li>
+          <li class="navigation__item navigation__item_footer"><a href="#" class="navigation__link navigation__link_footer">Аксессуары</a></li>
+          <li class="navigation__item navigation__item_footer"><a href="#" class="navigation__link navigation__link_footer">Бытовая техника</a></li>
         </ul>
       </nav>
-      <div class="copyright footer__copyright"><span class="copyright__span"></span></div>
+      <div class="copyright copyright_footer"><span class="copyright__span">All rights reserved. 2015. No copy allowed</span></div>
     </div>
   </footer>
 </body>
