@@ -2,7 +2,7 @@ var accordeon = (function () {
 
   var _openSection = function($this){
     var container = $this.closest('.options__item'),
-        content = container.find('.options-block-inner');
+        content = container.find('.options-block__wrapper');
 
     if (!container.hasClass('active')) {
       container.addClass('active');
