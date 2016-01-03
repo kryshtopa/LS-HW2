@@ -7,6 +7,7 @@
 }
 .information__text {
   padding: 25px 0 30px;
+  margin: 0 -2%;
 }
 .information__p {
   color: #333;
@@ -16,9 +17,21 @@
   margin-top: 0;
   text-indent: 35px;
   text-align: justify;
-  line-height: 1.5;
+  line-height: 1.45;
+  box-sizing: border-box;
+  padding: 0 4%;
 
     &:last-child {
       margin-bottom: 0;
     }
+}
+
+
+.first .column{
+    width: 48%;
+    float: left;
+}
+.last .column{
+    width: 48%;
+    float: right;
 }

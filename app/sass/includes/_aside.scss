@@ -7,6 +7,9 @@
   padding: 0;
   margin: 0;
 }
+.options-block {
+  position: relative;
+}
 
 .value-selector_aside {
   margin-bottom: 38px;
@@ -48,12 +51,31 @@
     border-radius: 0 0 5px 5px;
     border-bottom: 1px solid #dee1e4;
   }
+  &.active {
+    .options-block__heading {
+      &:after {
+        content: " ";
+        @include sort-sprite(arrow);
+      }
+    }
+  }
 }
 .options-block__heading {
   font-family: "OpenSans-Semibold";
   font-size: 16px;
   margin: 0;
   padding: 0;
+
+  &:after {
+    content: " ";
+    @include sort-sprite(arrow-rev);
+    width: 18px;
+    height: 10px;
+    display: inline-block;
+    position: absolute;
+    right: -18px;
+    top: 2px;
+  }
 }
 .options-block__list {
   margin: 17px 0;
@@ -88,7 +110,7 @@
 }
 .options-block__label input:checked + span {
     @include sort-sprite(cb-just-checked);
-    background-position: 0 -49px;    
+    background-position: 0 -59px;
 }
 .options-block__list .options-block__span {
   padding-left: 30px;

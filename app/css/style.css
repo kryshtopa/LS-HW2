@@ -168,6 +168,7 @@ html, body {
   background-image: -moz-linear-gradient(56deg, #ff6600 0%, #ff6a1b 45%, #ff6e35 99%);
   background-image: -webkit-linear-gradient(56deg, #ff6600 0%, #ff6a1b 45%, #ff6e35 99%);
   background-image: -ms-linear-gradient(56deg, #ff6600 0%, #ff6a1b 45%, #ff6e35 99%);
+  background-color: #ff6911;
   border: none;
   border-radius: 0 3px 3px 0;
   color: #fff;
@@ -200,8 +201,8 @@ html, body {
   color: #ff6600;
 }
 
-.sort-sprite, .options-block__label span, .options-block__label input:checked + span, .options-block__label_radio span, .options-block__label_radio input:checked + span, .view__item_link-lines, .view__item_link-rows, .view__item_link-grids {
-  background-image: url('../img/icons/sort-sa2b917a86d.png');
+.sort-sprite, .options__item.active .options-block__heading:after, .options-block__heading:after, .options-block__label span, .options-block__label input:checked + span, .options-block__label_radio span, .options-block__label_radio input:checked + span, .view__item_link-lines, .view__item_link-rows, .view__item_link-grids {
+  background-image: url('../img/icons/sort-sf5c3ec312d.png');
   background-repeat: no-repeat;
 }
 
@@ -211,6 +212,10 @@ html, body {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+.options-block {
+  position: relative;
 }
 
 .value-selector_aside {
@@ -253,12 +258,26 @@ html, body {
   border-radius: 0 0 5px 5px;
   border-bottom: 1px solid #dee1e4;
 }
+.options__item.active .options-block__heading:after {
+  content: " ";
+  background-position: 0 -29px;
+}
 
 .options-block__heading {
   font-family: "OpenSans-Semibold";
   font-size: 16px;
   margin: 0;
   padding: 0;
+}
+.options-block__heading:after {
+  content: " ";
+  background-position: 0 -9px;
+  width: 18px;
+  height: 10px;
+  display: inline-block;
+  position: absolute;
+  right: -18px;
+  top: 2px;
 }
 
 .options-block__list {
@@ -289,12 +308,12 @@ html, body {
   width: 19px;
   height: 19px;
   display: block;
-  background-position: 0 -67px;
+  background-position: 0 -78px;
 }
 
 .options-block__label input:checked + span {
-  background-position: 0 -48px;
-  background-position: 0 -49px;
+  background-position: 0 -59px;
+  background-position: 0 -59px;
 }
 
 .options-block__list .options-block__span {
@@ -303,11 +322,11 @@ html, body {
 }
 
 .options-block__label_radio span {
-  background-position: 0 -105px;
+  background-position: 0 -116px;
 }
 
 .options-block__label_radio input:checked + span {
-  background-position: 0 -86px;
+  background-position: 0 -97px;
 }
 
 .pagination-sprite, .pagination__item_prev .pagination__mark, .pagination__item_next .pagination__mark {
@@ -372,17 +391,17 @@ html, body {
   width: 16px;
 }
 .view__item_link-lines {
-  background-position: 0 -140px;
+  background-position: 0 -151px;
 }
 .view__item_link-rows {
-  background-position: 0 -124px;
+  background-position: 0 -135px;
 }
 .view__item_link-grids {
-  background-position: 0 -156px;
+  background-position: 0 -167px;
 }
 
 .products {
-  margin-bottom: 50px;
+  margin-bottom: 68px;
 }
 
 .products__list {
@@ -397,6 +416,9 @@ html, body {
 }
 .products__item:first-child {
   border-top: 0 none;
+}
+.products__item:hover {
+  box-shadow: 0px 1px 5.7px 0.3px rgba(118, 118, 118, 0.5);
 }
 
 .products__item_inner {
@@ -430,7 +452,7 @@ html, body {
 .products__slideshow-display, .products__slideshow-link {
   width: 134px;
   height: 134px;
-  border: 1px solid grey;
+  border: 1px solid #dee1e4;
   background: #fff;
   position: relative;
   display: block;
@@ -466,6 +488,9 @@ html, body {
   margin-left: 15px;
   float: left;
 }
+.products__slideshow-item.active .products__slideshow-link {
+  border-color: #60ac49;
+}
 
 .products__slideshow-link {
   width: 34px;
@@ -475,7 +500,7 @@ html, body {
   position: relative;
 }
 .products__slideshow-link:hover {
-  border-color: orange;
+  border-color: #ff6911;
 }
 
 .products__slideshow-thumb-img {
@@ -521,6 +546,7 @@ html, body {
 
 .products__desc-title {
   font-size: 16px;
+  font-family: OpenSans-Semibold;
   margin-bottom: 20px;
   padding-top: 7px;
 }
@@ -601,7 +627,7 @@ html, body {
 
 .products__info {
   padding-left: 25px;
-  border-left: 1px solid grey;
+  border-left: 1px solid #dee1e4;
   height: 100%;
 }
 
@@ -609,7 +635,7 @@ html, body {
   position: absolute;
   bottom: 0;
   right: 0;
-  padding: 0 3px 8px 0;
+  padding: 0 3px 0 0;
 }
 
 .products__price {
@@ -627,13 +653,13 @@ html, body {
   font-family: OpenSans-Bold;
   font-size: 14px;
   border-radius: 4px;
-  background-color: orange;
+  background-color: #ff6911;
   color: #fff;
   margin-bottom: 9px;
 }
 
 .products_price {
-  color: black;
+  color: #333;
   font-size: 20px;
   line-height: 22px;
   font-family: OpenSans-Semibold;
@@ -650,7 +676,7 @@ html, body {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background-color: green;
+  background-color: #60ac49;
   display: inline-block;
   vertical-align: top;
   zoom: 1;
@@ -675,7 +701,7 @@ html, body {
   vertical-align: top;
   zoom: 1;
   border-radius: 3px;
-  border: 1px solid grey;
+  border: 1px solid #dee1e4;
   position: relative;
   overflow: hidden;
 }
@@ -703,8 +729,8 @@ html, body {
   font-family: OpenSans-Bold;
   font-size: 12px;
   color: #7f7f7f;
-  width: 26px;
-  height: 26px;
+  width: 23px;
+  height: 23px;
 }
 .pagination__mark:hover {
   color: #fff;
@@ -735,7 +761,7 @@ html, body {
   border-top: 0;
   text-align: center;
   border-radius: 5px;
-  border: 1px solid grey;
+  border: 1px solid #dee1e4;
   margin-left: 11px;
   margin-bottom: 11px;
   background: #fff;
@@ -818,7 +844,7 @@ html, body {
   padding: 7px 0px 0px 8px;
 }
 .products__list_grids .products__option-item {
-  color: black;
+  color: #333;
   font-size: 14px;
 }
 .products__list_grids .products__option-item {
@@ -941,6 +967,7 @@ html, body {
 
 .information__text {
   padding: 25px 0 30px;
+  margin: 0 -2%;
 }
 
 .information__p {
@@ -951,10 +978,22 @@ html, body {
   margin-top: 0;
   text-indent: 35px;
   text-align: justify;
-  line-height: 1.5;
+  line-height: 1.45;
+  box-sizing: border-box;
+  padding: 0 4%;
 }
 .information__p:last-child {
   margin-bottom: 0;
+}
+
+.first .column {
+  width: 48%;
+  float: left;
+}
+
+.last .column {
+  width: 48%;
+  float: right;
 }
 
 .footer {

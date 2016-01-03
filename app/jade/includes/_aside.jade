@@ -8,7 +8,7 @@ aside.sidebar
     +menu(valueSelector, 'value-selector')
   .options
     ul.options__list
-      li.options__item
+      li.options__item.active
         div.options-block
           h4.options-block__heading Наличие в магазинах
           ul(class="options-block__list")
@@ -20,20 +20,20 @@ aside.sidebar
               label(class="options-block__label options-block__label_radio")
                 input(type="radio" value="closest-store" class="options-block__radio")
                 span(class="options-block__span") В ближайшем ко мне магазине
-      li.options__item
+      li.options__item.active
         div.options-block
           h4.options-block__heading Бренды
           +menuCheckbox(optionsBrand, 'options-block')
           a(href="#" class="options-block__reset") Сбросить фильтр
-      li.options__item
+      li.options__item.active
         div.options-block
           h4.options-block__heading Цена
           
-      li.options__item
+      li.options__item.active
         div.options-block
           h4.options-block__heading Цвет
           +menuColors(optionsColors, 'options-block')  
-      li.options__item
+      li.options__item.active
         div.options-block
           h4.options-block__heading Операционные системы
           +menuCheckbox(optionsOs, 'options-block')

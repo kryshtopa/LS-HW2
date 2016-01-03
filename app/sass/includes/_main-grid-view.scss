@@ -11,7 +11,7 @@
     border-top: 0;
     text-align: center;
     border-radius: 5px;
-    border: 1px solid grey;
+    border: 1px solid #dee1e4;
     margin-left: 11px;
     margin-bottom: 11px;
     background: #fff;
@@ -87,7 +87,7 @@
   .products__buy-btn {
     margin-bottom: 0;
     float: right;
-    
+
     padding: 7px 15px;
   }
 
@@ -102,7 +102,7 @@
 
   .products__option-item {
     @include clearfix;
-    color: black;
+    color: #333;
     font-size: 14px;
   }
 
