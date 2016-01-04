@@ -1,0 +1,26 @@
+.ui-slider-horizontal {
+  height: 3px !important;
+  background: grey;
+  border-radius: 0;
+  border: 0 none;
+  margin-bottom: 14px;
+
+  * {
+    outline: none !important;
+  }
+
+  .ui-slider-range {
+    background: orange;
+  }
+
+  .ui-slider-handle {
+    @include sort-sprite(slider);
+    top: 0;
+    border: 0 none;
+    border-radius: 0;
+    margin-left: -4px !important;
+    cursor: pointer;
+    width: 1.2em;
+    height: 0.8em !important;
+  }
+}

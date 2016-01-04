@@ -11,12 +11,14 @@
 .social__list {
   margin: 0;
   padding: 0;
+  font-size: 0;
 }
 .social__item {
   background-color: #333;
   border-radius: 50%;
   height: 26px;
   width: 26px;
+  font-size: 16px;
 
   text-indent: 100%;
   white-space: nowrap;

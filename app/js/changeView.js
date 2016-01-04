@@ -14,6 +14,19 @@ var changeView = (function () {
     }
 
     listOfItems.attr('class', _previousClass + ' ' + classOfViewState);
+
+
+    // Анимация
+    var bounce = $('.products__item')
+
+    if (!bounce.hasClass('animated bounce')){
+      bounce.addClass('animated bounce')
+    }
+    $('.view__item_link').mouseout(function(){
+      bounce.removeClass('animated bounce')
+    });
+
+
   };
 
   return {

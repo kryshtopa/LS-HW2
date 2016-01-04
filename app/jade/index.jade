@@ -9,7 +9,11 @@ body
       .container
         +menuNav(navigation, 'navigation', 'wide')
     .container
-      .breadcrumbs
+      ul.breadcrumbs__list
+        - var items = ["Главная", "Каталог"]
+        each item in items
+          li(class="breadcrumbs__item" + ((item == "Каталог") ? ' active' : ''))
+            a(href='#').breadcrumbs__link= item            
       h1.container__heading Мобильные телефоны
       include includes/_aside.jade
       include includes/_main.jade

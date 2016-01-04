@@ -1,7 +1,7 @@
 - var valueSelector = ["Флагманы", "Бюджетная линейка"]
 - var optionsBrand = ["Lenovo", "Apple", "Samsung", "Asus", "Motorola"]
 - var optionsOs = ["Android", "iOS", "Windows Mobile", "Simbian", "Custom"]
-- var optionsColors = ["white", "grey", "black", "dark-purple", "red", "yellow", "orange", "green", "blue", "purple", "pink", "brown"]
+- var colors = ['#fff', '#ccc', '#000', '#0a3153', '#ff1800', '#fff343', '#fb914a', '#92c37c', '#40a6ff', '#9870ad', '#dc78ad', '#7f401d']
 
 aside.sidebar
   div(class="value-selector value-selector_aside")
@@ -15,11 +15,11 @@ aside.sidebar
             ul(class="options-block__list")
               li(class="options-block__item")
                 label(class="options-block__label options-block__label_radio")
-                  input(type="radio" value="closest-store" class="options-block__radio")
+                  input(type="radio" class="options-block__radio" name='re')
                   span(class="options-block__span") Во всех магазинах
               li(class="options-block__item")
                 label(class="options-block__label options-block__label_radio")
-                  input(type="radio" value="closest-store" class="options-block__radio")
+                  input(type="radio" class="options-block__radio" name='re')
                   span(class="options-block__span") В ближайшем ко мне магазине
       li.options__item.active
         div.options-block
@@ -31,11 +31,24 @@ aside.sidebar
         div.options-block
           h4.options-block__heading Цена
           .options-block__wrapper
+            .options__slider
+              .options__slider-displays
+                .options__slider-left
+                  .options__slider-text от
+                  input(name="" type="text" placeholder="").options__slider-input.options__slider-input_from
+                .options__slider-right
+                  .options__slider-text до
+                  input(name="" type="text" placeholder="").options__slider-input.options__slider-input_to
+              div(class="options__slider-element" data-min="0" data-max="30000")   
       li.options__item.active
         div.options-block
           h4.options-block__heading Цвет
           .options-block__wrapper
-            +menuColors(optionsColors, 'options-block')  
+            ul.options__colors
+              each color in colors
+                li.options__colors-item
+                  a(href="#" style="background-color:" + color).options__colors-link 
+            a(href="#" class="options-block__reset") Сбросить фильтр
       li.options__item.active
         div.options-block
           h4.options-block__heading Операционные системы

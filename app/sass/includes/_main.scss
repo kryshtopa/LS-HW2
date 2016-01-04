@@ -1,6 +1,50 @@
 @import "icons/pagination/*.png";
 @import "icons/rating/*.png";
 
+
+
+
+.container__heading {
+  font-size: 20px;
+  font-family: "OpenSans-Bold";
+  color: #333;
+  line-height: 22px;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.breadcrumbs__list {
+  margin-bottom: 21px;
+}
+.breadcrumbs__item {
+  font-family: "OpenSans-Regular";
+  display: inline-block;
+  vertical-align: middle;
+
+  &:before {
+    content: '>';
+    display: inline-block;
+    vertical-align: middle;
+  }
+  &:first-child {
+    &:before {
+      display: none;
+    }
+  }
+  &.active {
+    .breadcrumbs__link {
+      color: #ff6600;
+      text-decoration: underline;
+    }
+  }
+}
+.breadcrumbs__link {
+  font-size: 14px;
+  line-height: 16px;
+  text-decoration: none;
+  color: #333;
+}
+
 .sort {
 	background-color: #e4ebee;
 	height: 51px;
@@ -57,6 +101,8 @@
 		}
 	}
 }
+
+
 
 
 

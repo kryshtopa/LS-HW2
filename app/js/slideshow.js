@@ -29,9 +29,3 @@ var slideshow = (function(){
 }());
 
 slideshow.init();
-
-// $(document).ready(function(){
-//   if ($('.product__slideshow').length) {
-//     slideshow.init();
-//   }
-// })
