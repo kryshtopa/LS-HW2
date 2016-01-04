@@ -1,12 +1,52 @@
 'use strict';
 
 var gulp = require("gulp"),
+    wiredep = require('wiredep').stream,
     browserSync = require("browser-sync").create(),
     jade = require('gulp-jade'),
     compass = require('gulp-compass'),
     plumber = require('gulp-plumber');
-    //sass = require('gulp-sass');
 
+// Сборка html css javascript + удаление папки dist
+var rimraf = require('gulp-rimraf'),
+    useref = require('gulp-useref'),
+    uglify = require('gulp-uglify'),
+    gulpif = require('gulp-if'),
+    minifyCss = require('gulp-minify-css');
+
+// Финальная сборка
+var filter = require('gulp-filter'),
+		imagemin = require('gulp-imagemin'),
+		size = require('gulp-size');
+
+
+// Перенос шрифтов
+		gulp.task('fonts', function() {
+		  gulp.src('app/css/fonts/*')
+		    .pipe(filter(['*.eot','*.svg','*.ttf','*.woff','*.woff2']))
+		    .pipe(gulp.dest('dist/fonts/'))
+		});
+
+// Картинки
+		gulp.task('images', function () {
+		  return gulp.src('app/img/**/*')
+		    .pipe(imagemin({
+		      progressive: true,
+		      interlaced: true
+		    }))
+		    .pipe(gulp.dest('dist/img'));
+		});
+
+// Остальные файлы, такие как favicon.ico и пр.
+		gulp.task('extras', function () {
+		  return gulp.src([
+		    'app/*.*',
+		    '!app/*.html'
+		  ]).pipe(gulp.dest('dist'));
+		});
+
+
+// Запускает сервер
 gulp.task('server', function () {
     browserSync.init({
         port: 9000,
@@ -26,13 +66,6 @@ gulp.task('sass', function () {
             image: 'app/img',
             sourcemap: false
         }));
-        //.pipe(sass({
-        //    loadPath: [
-        //        '/app/bower/support-for/sass',
-        //        '/app/bower/normalize.scss/sass'
-        //    ]
-        //}).on('error', sass.logError))
-        //.pipe(gulp.dest('app/css'));
 });
 
 gulp.task('jade', function() {
@@ -55,7 +88,39 @@ gulp.task('watch', function () {
         'app/js/*.js',
         'app/css/*.css'
     ]).on('change', browserSync.reload);
-    //gulp.watch('bower.json', ['bower']);
+    gulp.watch('bower.json', ['wiredep']);
 });
 
 gulp.task('default', ['server', 'watch', 'jade']);
+
+// Следим за bower
+	gulp.task('wiredep', function () {
+	  gulp.src('app/*.html')
+	    .pipe(wiredep())
+	    .pipe(gulp.dest('app/'))
+	});
+
+// Переносим HTML, CSS, JS в папку dist
+	gulp.task('useref', function () {
+	  return gulp.src('app/*.html')
+	    .pipe(useref())
+	    .pipe(gulpif('*.js', uglify()))
+	    .pipe(gulpif('*.css', minifyCss({compatibility: 'ie8'})))
+	    .pipe(gulp.dest('dist'));
+	});
+
+  // Очистка
+		gulp.task('clean', function() {
+			return gulp.src('dist', { read: false })
+		  	.pipe(rimraf());
+		});
+
+// Сборка и вывод размера содержимого папки dist
+gulp.task('dist', ['useref', 'images', 'fonts', 'extras'], function () {
+  return gulp.src('dist/**/*').pipe(size({title: 'build'}));
+});
+
+// Собираем папку DIST (только после компиляции Jade)
+gulp.task('build', ['clean'], function () {
+  gulp.start('dist');
+});

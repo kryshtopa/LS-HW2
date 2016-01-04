@@ -1,31 +1,38 @@
-<!DOCTYPE html>
-<html lang="ru-RU"></html>
-<head>
-  <meta charset="UTF-8">
-  <!--IE-to-EDGE-->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <!--Scale-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title></title>
-  <!--SEO-->
-  <meta name="description" content="content">
-  <meta name="keywords" content="content">
-  <meta name="author" content="content">
-  <!--favicon.ico-->
-  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  <!--Fonts-->
-  <link rel="stylesheet" href="css/fonts/stylesheet.css">
-  <!--CSS-->
-  <link rel="stylesheet" href="bower/normalize-css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/animate.min.css">
-  <link href="bower/lightbox2/dist/css/lightbox.min.css" rel="stylesheet">
-  <link href="bower/jquery-ui/themes/base/slider.css" rel="stylesheet">
-  <link href="bower/select2/dist/css/select2.min.css" rel="stylesheet">
-  <!--modernizr-->
-  <script src="bower/modernizer/modernizr.js"></script>
-</head>
+
+<html lang="ru-RU">
+  <head>
+    <meta charset="UTF-8">
+    <!--IE-to-EDGE-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--Scale-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <!--SEO-->
+    <meta name="description" content="content">
+    <meta name="keywords" content="content">
+    <meta name="author" content="content">
+    <!--favicon.ico-->
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <!-- build:css fonts/fonts.min.css -->
+    <link rel="stylesheet" href="css/fonts/stylesheet.css">
+    <!-- endbuild -->
+    <!-- build:css css/main.min.css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <!-- endbuild -->
+    <!-- build:css css/vendor.min.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower/normalize-css/normalize.css" />
+    <link rel="stylesheet" href="bower/lightbox2/dist/css/lightbox.css" />
+    <link rel="stylesheet" href="bower/jquery-ui/themes/base/slider.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:js js/modernizr.min.js -->
+    <script src="bower/modernizr/src/Modernizr.js"></script>
+    <!-- endbuild -->
+  </head>
+</html>
 <body>
   <div class="wrapper">
     <header class="header">
@@ -48,12 +55,12 @@
       </div>
       <div class="header__row header__row_colored">
         <div class="container">
-          <div class="logo logo_header"><a href="" class="logo__link"><img src="../img/logo.png" class="logo__img">
+          <div class="logo logo_header"><a href="" class="logo__link"><img src="img/logo.png" class="logo__img"/>
               <div class="logo__text">CoolTech</div></a></div>
           <div class="search search_header">
             <form class="form search__form">
-              <input type="search" placeholder="Что будем искать" required class="search__input">
-              <input type="button" value="Найти" class="search__button">
+              <input type="search" placeholder="Что будем искать" required="required" class="search__input"/>
+              <input type="button" value="Найти" class="search__button"/>
             </form>
           </div>
           <div class="menu menu_header">
@@ -101,12 +108,12 @@
                   <ul class="options-block__list">
                     <li class="options-block__item">
                       <label class="options-block__label options-block__label_radio">
-                        <input type="radio" name="re" class="options-block__radio"><span class="options-block__span">Во всех магазинах</span>
+                        <input type="radio" name="re" class="options-block__radio"/><span class="options-block__span">Во всех магазинах</span>
                       </label>
                     </li>
                     <li class="options-block__item">
                       <label class="options-block__label options-block__label_radio">
-                        <input type="radio" name="re" class="options-block__radio"><span class="options-block__span">В ближайшем ко мне магазине</span>
+                        <input type="radio" name="re" class="options-block__radio"/><span class="options-block__span">В ближайшем ко мне магазине</span>
                       </label>
                     </li>
                   </ul>
@@ -155,11 +162,11 @@
                     <div class="options__slider-displays">
                       <div class="options__slider-left">
                         <div class="options__slider-text">от</div>
-                        <input name="" type="text" placeholder="" class="options__slider-input options__slider-input_from">
+                        <input name="" type="text" placeholder="" class="options__slider-input options__slider-input_from"/>
                       </div>
                       <div class="options__slider-right">
                         <div class="options__slider-text">до</div>
-                        <input name="" type="text" placeholder="" class="options__slider-input options__slider-input_to">
+                        <input name="" type="text" placeholder="" class="options__slider-input options__slider-input_to"/>
                       </div>
                     </div>
                     <div data-min="0" data-max="30000" class="options__slider-element">  </div>
@@ -250,11 +257,11 @@
               <div class="products__item_inner">
                 <div class="products__left">
                   <div class="products__slideshow">
-                    <div class="products__slideshow-block"><a href="#" data-lightbox="0" class="products__slideshow-display"><img src="img/items/lumia/lumia-0.jpg" alt="" class="products__slideshow-img"></a>
+                    <div class="products__slideshow-block"><a href="#" data-lightbox="0" class="products__slideshow-display"><img src="img/items/lumia/lumia-0.jpg" alt="" class="products__slideshow-img"/></a>
                       <ul class="products__slideshow-thumbs">
-                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-1.jpg" alt="" class="products__slideshow-thumb-img"></a></li>
-                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-2.jpg" alt="" class="products__slideshow-thumb-img"></a></li>
-                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-3.jpg" alt="" class="products__slideshow-thumb-img"></a></li>
+                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-1.jpg" alt="" class="products__slideshow-thumb-img"/></a></li>
+                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-2.jpg" alt="" class="products__slideshow-thumb-img"/></a></li>
+                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-3.jpg" alt="" class="products__slideshow-thumb-img"/></a></li>
                       </ul>
                     </div>
                     <div class="products__article">
@@ -321,11 +328,11 @@
               <div class="products__item_inner">
                 <div class="products__left">
                   <div class="products__slideshow">
-                    <div class="products__slideshow-block"><a href="#" data-lightbox="1" class="products__slideshow-display"><img src="img/items/lumia/lumia-0.jpg" alt="" class="products__slideshow-img"></a>
+                    <div class="products__slideshow-block"><a href="#" data-lightbox="1" class="products__slideshow-display"><img src="img/items/lumia/lumia-0.jpg" alt="" class="products__slideshow-img"/></a>
                       <ul class="products__slideshow-thumbs">
-                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-1.jpg" alt="" class="products__slideshow-thumb-img"></a></li>
-                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-2.jpg" alt="" class="products__slideshow-thumb-img"></a></li>
-                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-3.jpg" alt="" class="products__slideshow-thumb-img"></a></li>
+                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-1.jpg" alt="" class="products__slideshow-thumb-img"/></a></li>
+                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-2.jpg" alt="" class="products__slideshow-thumb-img"/></a></li>
+                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-3.jpg" alt="" class="products__slideshow-thumb-img"/></a></li>
                       </ul>
                     </div>
                     <div class="products__article">
@@ -392,11 +399,11 @@
               <div class="products__item_inner">
                 <div class="products__left">
                   <div class="products__slideshow">
-                    <div class="products__slideshow-block"><a href="#" data-lightbox="2" class="products__slideshow-display"><img src="img/items/lumia/lumia-0.jpg" alt="" class="products__slideshow-img"></a>
+                    <div class="products__slideshow-block"><a href="#" data-lightbox="2" class="products__slideshow-display"><img src="img/items/lumia/lumia-0.jpg" alt="" class="products__slideshow-img"/></a>
                       <ul class="products__slideshow-thumbs">
-                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-1.jpg" alt="" class="products__slideshow-thumb-img"></a></li>
-                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-2.jpg" alt="" class="products__slideshow-thumb-img"></a></li>
-                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-3.jpg" alt="" class="products__slideshow-thumb-img"></a></li>
+                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-1.jpg" alt="" class="products__slideshow-thumb-img"/></a></li>
+                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-2.jpg" alt="" class="products__slideshow-thumb-img"/></a></li>
+                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-3.jpg" alt="" class="products__slideshow-thumb-img"/></a></li>
                       </ul>
                     </div>
                     <div class="products__article">
@@ -463,11 +470,11 @@
               <div class="products__item_inner">
                 <div class="products__left">
                   <div class="products__slideshow">
-                    <div class="products__slideshow-block"><a href="#" data-lightbox="3" class="products__slideshow-display"><img src="img/items/lumia/lumia-0.jpg" alt="" class="products__slideshow-img"></a>
+                    <div class="products__slideshow-block"><a href="#" data-lightbox="3" class="products__slideshow-display"><img src="img/items/lumia/lumia-0.jpg" alt="" class="products__slideshow-img"/></a>
                       <ul class="products__slideshow-thumbs">
-                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-1.jpg" alt="" class="products__slideshow-thumb-img"></a></li>
-                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-2.jpg" alt="" class="products__slideshow-thumb-img"></a></li>
-                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-3.jpg" alt="" class="products__slideshow-thumb-img"></a></li>
+                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-1.jpg" alt="" class="products__slideshow-thumb-img"/></a></li>
+                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-2.jpg" alt="" class="products__slideshow-thumb-img"/></a></li>
+                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-3.jpg" alt="" class="products__slideshow-thumb-img"/></a></li>
                       </ul>
                     </div>
                     <div class="products__article">
@@ -534,11 +541,11 @@
               <div class="products__item_inner">
                 <div class="products__left">
                   <div class="products__slideshow">
-                    <div class="products__slideshow-block"><a href="#" data-lightbox="4" class="products__slideshow-display"><img src="img/items/lumia/lumia-0.jpg" alt="" class="products__slideshow-img"></a>
+                    <div class="products__slideshow-block"><a href="#" data-lightbox="4" class="products__slideshow-display"><img src="img/items/lumia/lumia-0.jpg" alt="" class="products__slideshow-img"/></a>
                       <ul class="products__slideshow-thumbs">
-                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-1.jpg" alt="" class="products__slideshow-thumb-img"></a></li>
-                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-2.jpg" alt="" class="products__slideshow-thumb-img"></a></li>
-                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-3.jpg" alt="" class="products__slideshow-thumb-img"></a></li>
+                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-1.jpg" alt="" class="products__slideshow-thumb-img"/></a></li>
+                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-2.jpg" alt="" class="products__slideshow-thumb-img"/></a></li>
+                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-3.jpg" alt="" class="products__slideshow-thumb-img"/></a></li>
                       </ul>
                     </div>
                     <div class="products__article">
@@ -605,11 +612,11 @@
               <div class="products__item_inner">
                 <div class="products__left">
                   <div class="products__slideshow">
-                    <div class="products__slideshow-block"><a href="#" data-lightbox="5" class="products__slideshow-display"><img src="img/items/lumia/lumia-0.jpg" alt="" class="products__slideshow-img"></a>
+                    <div class="products__slideshow-block"><a href="#" data-lightbox="5" class="products__slideshow-display"><img src="img/items/lumia/lumia-0.jpg" alt="" class="products__slideshow-img"/></a>
                       <ul class="products__slideshow-thumbs">
-                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-1.jpg" alt="" class="products__slideshow-thumb-img"></a></li>
-                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-2.jpg" alt="" class="products__slideshow-thumb-img"></a></li>
-                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-3.jpg" alt="" class="products__slideshow-thumb-img"></a></li>
+                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-1.jpg" alt="" class="products__slideshow-thumb-img"/></a></li>
+                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-2.jpg" alt="" class="products__slideshow-thumb-img"/></a></li>
+                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-3.jpg" alt="" class="products__slideshow-thumb-img"/></a></li>
                       </ul>
                     </div>
                     <div class="products__article">
@@ -676,11 +683,11 @@
               <div class="products__item_inner">
                 <div class="products__left">
                   <div class="products__slideshow">
-                    <div class="products__slideshow-block"><a href="#" data-lightbox="6" class="products__slideshow-display"><img src="img/items/lumia/lumia-0.jpg" alt="" class="products__slideshow-img"></a>
+                    <div class="products__slideshow-block"><a href="#" data-lightbox="6" class="products__slideshow-display"><img src="img/items/lumia/lumia-0.jpg" alt="" class="products__slideshow-img"/></a>
                       <ul class="products__slideshow-thumbs">
-                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-1.jpg" alt="" class="products__slideshow-thumb-img"></a></li>
-                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-2.jpg" alt="" class="products__slideshow-thumb-img"></a></li>
-                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-3.jpg" alt="" class="products__slideshow-thumb-img"></a></li>
+                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-1.jpg" alt="" class="products__slideshow-thumb-img"/></a></li>
+                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-2.jpg" alt="" class="products__slideshow-thumb-img"/></a></li>
+                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-3.jpg" alt="" class="products__slideshow-thumb-img"/></a></li>
                       </ul>
                     </div>
                     <div class="products__article">
@@ -747,11 +754,11 @@
               <div class="products__item_inner">
                 <div class="products__left">
                   <div class="products__slideshow">
-                    <div class="products__slideshow-block"><a href="#" data-lightbox="7" class="products__slideshow-display"><img src="img/items/lumia/lumia-0.jpg" alt="" class="products__slideshow-img"></a>
+                    <div class="products__slideshow-block"><a href="#" data-lightbox="7" class="products__slideshow-display"><img src="img/items/lumia/lumia-0.jpg" alt="" class="products__slideshow-img"/></a>
                       <ul class="products__slideshow-thumbs">
-                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-1.jpg" alt="" class="products__slideshow-thumb-img"></a></li>
-                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-2.jpg" alt="" class="products__slideshow-thumb-img"></a></li>
-                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-3.jpg" alt="" class="products__slideshow-thumb-img"></a></li>
+                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-1.jpg" alt="" class="products__slideshow-thumb-img"/></a></li>
+                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-2.jpg" alt="" class="products__slideshow-thumb-img"/></a></li>
+                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-3.jpg" alt="" class="products__slideshow-thumb-img"/></a></li>
                       </ul>
                     </div>
                     <div class="products__article">
@@ -818,11 +825,11 @@
               <div class="products__item_inner">
                 <div class="products__left">
                   <div class="products__slideshow">
-                    <div class="products__slideshow-block"><a href="#" data-lightbox="8" class="products__slideshow-display"><img src="img/items/lumia/lumia-0.jpg" alt="" class="products__slideshow-img"></a>
+                    <div class="products__slideshow-block"><a href="#" data-lightbox="8" class="products__slideshow-display"><img src="img/items/lumia/lumia-0.jpg" alt="" class="products__slideshow-img"/></a>
                       <ul class="products__slideshow-thumbs">
-                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-1.jpg" alt="" class="products__slideshow-thumb-img"></a></li>
-                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-2.jpg" alt="" class="products__slideshow-thumb-img"></a></li>
-                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-3.jpg" alt="" class="products__slideshow-thumb-img"></a></li>
+                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-1.jpg" alt="" class="products__slideshow-thumb-img"/></a></li>
+                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-2.jpg" alt="" class="products__slideshow-thumb-img"/></a></li>
+                        <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-3.jpg" alt="" class="products__slideshow-thumb-img"/></a></li>
                       </ul>
                     </div>
                     <div class="products__article">
@@ -917,7 +924,7 @@
   </div>
   <footer class="footer">
     <div class="footer__container">
-      <div class="logo logo_footer float-left footer__logo_float-left"><a href="" class="logo__link"><img src="../img/logo-footer.png" class="logo__img">
+      <div class="logo logo_footer float-left footer__logo_float-left"><a href="" class="logo__link"><img src="img/logo-footer.png" class="logo__img"/>
           <div class="logo__text">CoolTech</div></a></div>
       <div class="social social_footer">
         <ul class="social__list">
@@ -937,17 +944,22 @@
           <li class="navigation__item navigation__item_footer"><a href="#" class="navigation__link navigation__link_footer">Бытовая техника</a></li>
         </ul>
       </nav>
-      <div class="copyright copyright_footer"><span class="copyright__span">All rights reserved. 2015. No copy allowed</span></div><script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script><script>window.jQuery || document.write('<script src="/js/_vendor/jquery-1.11.0.min.js"><\/script>');
-      </script>
-      <script src="bower/jquery.columnizer/src/jquery.columnizer.min.js"></script>
-      <script src="bower/lightbox2/dist/js/lightbox.min.js"></script>    
-      <script src="bower/jquery-ui/jquery-ui.min.js"></script>    
-      <script src="bower/jquery-ui/ui/slider.js"></script>    
-      <script src="bower/select2/dist/js/select2.min.js"></script>    
-      <script src="js/main.js"></script>
-      <script src="js/changeView.js"></script>
-      <script src="js/slideshow.js"></script>
-      <script src="js/accordeon.js"></script>
+      <div class="copyright copyright_footer"><span class="copyright__span">All rights reserved. 2015. No copy allowed</span></div>
     </div>
-  </footer>
+  </footer><!-- build:js js/vendor.min.js -->            
+  <!-- bower:js -->
+  <script src="bower/jquery/dist/jquery.js"></script>
+  <script src="bower/jquery.columnizer/src/jquery.columnizer.js"></script>
+  <script src="bower/lightbox2/dist/js/lightbox.js"></script>
+  <script src="bower/select2/dist/js/select2.js"></script>
+  <script src="bower/jquery-ui/ui/slider.js"></script>
+  <script src="bower/jquery-ui/jquery-ui.min.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:js js/main.min.js -->
+  <script src="js/main.js"></script>
+  <script src="js/changeView.js"></script>
+  <script src="js/slideshow.js"></script>
+  <script src="js/accordeon.js"></script>
+  <!-- endbuild -->
 </body>

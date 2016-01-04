@@ -1,24 +1,3 @@
-html, body {
-  height: 100%;
-}
-
-.wrapper {
-  clear: both;
-  min-height: 100%;
-  height: auto !important;
-  height: 100%;
-  margin-bottom: -220px;
-}
-.wrapper #layout_footer {
-  height: 220px;
-}
-
-.footer {
-  clear: both;
-  position: relative;
-  height: 220px;
-}
-
 .contacts-sprite, .contacts__address:before, .contacts__phone:before {
   background-image: url('../img/icons/contacts-s50ae9ca47d.png');
   background-repeat: no-repeat;
@@ -208,6 +187,10 @@ html, body {
 .sort-sprite, .options__item.active .options-block__heading:after, .options-block__heading:after, .options-block__label span, .options-block__label input:checked + span, .options-block__label_radio span, .options-block__label_radio input:checked + span, .view__item_link-lines, .view__item_link-rows, .view__item_link-grids, .ui-slider-horizontal .ui-slider-handle, .select2-container .select2-selection__arrow b, .select2-container.select2-container--open b {
   background-image: url('../img/icons/sort-sec7e125e06.png');
   background-repeat: no-repeat;
+}
+
+.sidebar {
+  width: 333px;
 }
 
 .value-selector__list,
@@ -456,6 +439,10 @@ html, body {
   line-height: 16px;
   text-decoration: none;
   color: #333;
+}
+
+.main {
+  width: 743px;
 }
 
 .sort {
@@ -1068,7 +1055,7 @@ html, body {
   vertical-align: top;
   zoom: 1;
   vertical-align: middle;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 .products__list_lines .products__info-bottom {
   position: static;
@@ -1140,6 +1127,7 @@ html, body {
 }
 
 .logo_footer {
+  width: 238px;
   margin-top: 38px;
 }
 
@@ -1390,6 +1378,27 @@ html, body {
 }
 
 html, body {
+  height: 100%;
+}
+
+.wrapper {
+  clear: both;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin-bottom: -220px;
+}
+.wrapper #layout_footer {
+  height: 220px;
+}
+
+.footer {
+  clear: both;
+  position: relative;
+  height: 220px;
+}
+
+html, body {
   width: 100%;
   height: 100%;
   background-color: #f4f4f4;
@@ -1435,14 +1444,6 @@ p {
 .menu__item:last-child,
 .social__item:last-child {
   margin-right: 0;
-}
-
-.sidebar {
-  width: 333px;
-}
-
-.main {
-  width: 743px;
 }
 
 .information,

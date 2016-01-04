@@ -6,9 +6,6 @@
   .products__slideshow {
     width: 110px;
   }
-  // .products__item {
-  //   height: 50px;
-  // }
   .products__item_inner {
     height: 100%;
     box-sizing: border-box;
@@ -55,7 +52,7 @@
     padding-left: 0;
     @include inlineblock;
     vertical-align: middle;
-    margin-right: 20px;
+    margin-right: 10px;
   }
   .products__info-bottom {
     position: static;
