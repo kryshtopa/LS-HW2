@@ -22,6 +22,7 @@
   <link rel="stylesheet" href="css/animate.min.css">
   <link href="bower/lightbox2/dist/css/lightbox.min.css" rel="stylesheet">
   <link href="bower/jquery-ui/themes/base/slider.css" rel="stylesheet">
+  <link href="bower/select2/dist/css/select2.min.css" rel="stylesheet">
   <!--modernizr-->
   <script src="bower/modernizer/modernizr.js"></script>
 </head>
@@ -226,7 +227,15 @@
       </aside>
       <section class="main">
         <div class="sort main__sort">
-          <div class="sort__selector">Сортировать по</div>
+          <div class="sort__selector">
+            <div class="sort__title">Сортировать по</div>
+            <div class="sort__select">
+              <select class="sort__select-elem">
+                <option value="">по цене</option>
+                <option value="">по популярности</option>
+              </select>
+            </div>
+          </div>
           <div class="sort__view"> <span class="view__heading">Вид каталога</span>
             <ul class="view__list">
               <li data-view="rows" class="view__item view__item_rows"><a href="#" class="view__item_link view__item_link-rows"></a></li>
@@ -299,7 +308,8 @@
                 </div>
                 <div class="products__right">
                   <div class="products__info">
-                    <div class="products__price">11290<i class="rub"></i></div>
+                    <div class="products__price">11290</div>
+                    <div class="rub">p</div>
                   </div>
                   <div class="products__info-bottom"><a href="#" class="products__buy-btn">В корзину</a>
                     <div class="products__aviability">В наличии</div>
@@ -369,7 +379,8 @@
                 </div>
                 <div class="products__right">
                   <div class="products__info">
-                    <div class="products__price">11290<i class="rub"></i></div>
+                    <div class="products__price">11290</div>
+                    <div class="rub">p</div>
                   </div>
                   <div class="products__info-bottom"><a href="#" class="products__buy-btn">В корзину</a>
                     <div class="products__aviability">В наличии</div>
@@ -439,7 +450,8 @@
                 </div>
                 <div class="products__right">
                   <div class="products__info">
-                    <div class="products__price">11290<i class="rub"></i></div>
+                    <div class="products__price">11290</div>
+                    <div class="rub">p</div>
                   </div>
                   <div class="products__info-bottom"><a href="#" class="products__buy-btn">В корзину</a>
                     <div class="products__aviability">В наличии</div>
@@ -509,7 +521,8 @@
                 </div>
                 <div class="products__right">
                   <div class="products__info">
-                    <div class="products__price">11290<i class="rub"></i></div>
+                    <div class="products__price">11290</div>
+                    <div class="rub">p</div>
                   </div>
                   <div class="products__info-bottom"><a href="#" class="products__buy-btn">В корзину</a>
                     <div class="products__aviability">В наличии</div>
@@ -579,7 +592,8 @@
                 </div>
                 <div class="products__right">
                   <div class="products__info">
-                    <div class="products__price">11290<i class="rub"></i></div>
+                    <div class="products__price">11290</div>
+                    <div class="rub">p</div>
                   </div>
                   <div class="products__info-bottom"><a href="#" class="products__buy-btn">В корзину</a>
                     <div class="products__aviability">В наличии</div>
@@ -649,7 +663,8 @@
                 </div>
                 <div class="products__right">
                   <div class="products__info">
-                    <div class="products__price">11290<i class="rub"></i></div>
+                    <div class="products__price">11290</div>
+                    <div class="rub">p</div>
                   </div>
                   <div class="products__info-bottom"><a href="#" class="products__buy-btn">В корзину</a>
                     <div class="products__aviability">В наличии</div>
@@ -719,7 +734,8 @@
                 </div>
                 <div class="products__right">
                   <div class="products__info">
-                    <div class="products__price">11290<i class="rub"></i></div>
+                    <div class="products__price">11290</div>
+                    <div class="rub">p</div>
                   </div>
                   <div class="products__info-bottom"><a href="#" class="products__buy-btn">В корзину</a>
                     <div class="products__aviability">В наличии</div>
@@ -789,7 +805,8 @@
                 </div>
                 <div class="products__right">
                   <div class="products__info">
-                    <div class="products__price">11290<i class="rub"></i></div>
+                    <div class="products__price">11290</div>
+                    <div class="rub">p</div>
                   </div>
                   <div class="products__info-bottom"><a href="#" class="products__buy-btn">В корзину</a>
                     <div class="products__aviability">В наличии</div>
@@ -859,7 +876,8 @@
                 </div>
                 <div class="products__right">
                   <div class="products__info">
-                    <div class="products__price">11290<i class="rub"></i></div>
+                    <div class="products__price">11290</div>
+                    <div class="rub">p</div>
                   </div>
                   <div class="products__info-bottom"><a href="#" class="products__buy-btn">В корзину</a>
                     <div class="products__aviability">В наличии</div>
@@ -925,6 +943,7 @@
       <script src="bower/lightbox2/dist/js/lightbox.min.js"></script>    
       <script src="bower/jquery-ui/jquery-ui.min.js"></script>    
       <script src="bower/jquery-ui/ui/slider.js"></script>    
+      <script src="bower/select2/dist/js/select2.min.js"></script>    
       <script src="js/main.js"></script>
       <script src="js/changeView.js"></script>
       <script src="js/slideshow.js"></script>

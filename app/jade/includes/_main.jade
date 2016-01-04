@@ -1,6 +1,12 @@
 section.main
   div(class="sort main__sort")
-    div(class="sort__selector") Сортировать по
+    div(class="sort__selector")
+      .sort__title Сортировать по
+      .sort__select
+        select.sort__select-elem
+          - var options = ["по цене", "по популярности"]
+          each option in options
+            option(value="")= option
     div(class="sort__view") 
       span.view__heading Вид каталога
       ul.view__list
@@ -46,7 +52,7 @@ section.main
             .products__right
               .products__info
                 .products__price 11290
-                  i.rub
+                .rub p
               .products__info-bottom
                 a(href='#').products__buy-btn В корзину
                 .products__aviability В наличии

@@ -24,6 +24,7 @@
   &:before {
     content: '>';
     display: inline-block;
+    margin-right: 3px;
     vertical-align: middle;
   }
   &:first-child {
@@ -59,8 +60,19 @@
 	color: #5d656c;
 	display: inline-block;
 	margin-right: 14px;
-	font-family: OpenSans-Regular;
-	font-size: 14px;
+  height: 52px;
+  width: 50%;
+}
+.sort__title,
+.sort__select {
+  display: inline-block;
+  vertical-align: middle;
+}
+.sort__title {
+  padding: 15px 5px 15px 20px;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: "OpenSans-Regular";
 }
 
 .sort__view {
@@ -314,11 +326,19 @@
 	color: #fff;
 	margin-bottom: 9px;
 }
-.products_price {
+.products__price {
+  display: inline-block;
 	color: #333;
 	font-size: 20px;
 	line-height: 22px;
 	font-family: OpenSans-Semibold;
+}
+.rub {
+  display: inline-block;
+  font-family: als_rublregular;
+  font-size: 20px;
+  line-height: 22px;
+  color: #333;
 }
 .products__aviability {
 	font-family: OpenSans-Bold;

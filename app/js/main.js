@@ -42,15 +42,34 @@ $(document).ready(function() {
   // Вызывает слайдер
   if ($('.options__slider-element').length) {
     slider.init();
-  }
+  };
+
+  // Селектор
+  if ($('.sort__select-elem').length) {
+      $('.sort__select-elem').select2({
+        minimumResultsForSearch: Infinity
+      });
+  };
 
   // Разделение текста на колонки
   $('.information__text').columnize({
     columns: 2
-  })
+  });
 
+  // Сброс чекбоксов
+  $('.options-block__reset').on('click', function(e) {
+    e.preventDefault();
 
-  //  Деселект радио-кнопок
+    var $this = $(this),
+        container = $this.closest('.options__item'),
+        checkboxes = container.find('input:checkbox');
+
+    checkboxes.each(function() {
+      $(this).removeProp('checked');
+    });
+  });
+
+  // Деселект радио-кнопок
   var allRadios = document.getElementsByName('re');
           var booRadio;
           var x = 0;
