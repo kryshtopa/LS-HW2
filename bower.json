@@ -12,6 +12,13 @@
   "overrides": {
     "select2": {
       "main": [
+        ""
+      ]
+    }
+  },
+  "overrides": {
+    "jquery": {
+      "main": [
         "./dist/css/select2.css",
         "./dist/js/select2.js"
       ]
@@ -20,9 +27,9 @@
   "overrides": {
     "jquery-ui": {
       "main": [
-        "./ui/slider.js",
+        "./themes/base/slider.css",
         "./jquery-ui.min.js",
-        "./themes/base/slider.css"
+        "./ui/slider.js"
       ]
     }
   }

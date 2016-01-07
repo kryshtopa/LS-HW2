@@ -13,6 +13,7 @@
 @import "compass/layout.scss";
 
 @include sticky-footer(220px, ".wrapper", "#layout_footer", ".footer");
+@include sticky-footer(10px, ".footer__wrapper", "#layout_footer", ".copyright_footer");
 
 
 html, body {
@@ -22,7 +23,13 @@ html, body {
 }
 
 .wrapper {
-    min-width: 1120px;
+  min-width: 1120px;
+}
+.footer__wrapper {
+  margin-bottom: -10px;
+	width: 100%;
+	min-height: 220px;
+	@include clearfix;
 }
 
 .container,

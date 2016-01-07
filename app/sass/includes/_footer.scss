@@ -1,10 +1,13 @@
 .footer {
   background-image: url(../img/footer.png);
+  min-height: 220px !important;
+  height: auto !important;
   padding: 35px 80px 30px;
 }
 .logo_footer {
-  width: 238px;
   margin-top: 38px;
+  width: 238px;
+  height: 36px;
 }
 
 .copyright {
@@ -14,7 +17,7 @@
   bottom: 0;
   left: 0;
   border-top: 1px solid #494949;
-  position: absolute;
+  position: absolute !important;
   width: 100%;
   font-family: OpenSans-Regular;
   font-size: 12px;

@@ -6,30 +6,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!--Scale-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>CoolTech</title>
     <!--SEO-->
-    <meta name="description" content="content">
-    <meta name="keywords" content="content">
-    <meta name="author" content="content">
+    <meta name="description" content="описание страницы">
+    <meta name="keywords" content="ключевые слова страницы">
+    <meta name="author" content="автор страницы">
     <!--favicon.ico-->
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-touch-icon-76x76.png">
+    <link rel="icon" type="image/png" href="img/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="img/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="img/favicon/manifest.json">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ff8f0b">
+    <meta name="msapplication-config" content="img/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ff8f0b">
     <!-- build:css fonts/fonts.min.css -->
     <link rel="stylesheet" href="css/fonts/stylesheet.css">
     <!-- endbuild -->
     <!-- build:css css/main.min.css -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/animate.min.css">
     <!-- endbuild -->
     <!-- build:css css/vendor.min.css -->
+    <link rel="stylesheet" href="css/animate.min.css">
     <!-- bower:css -->
-    <link rel="stylesheet" href="bower/normalize-css/normalize.css" />
-    <link rel="stylesheet" href="bower/lightbox2/dist/css/lightbox.css" />
-    <link rel="stylesheet" href="bower/jquery-ui/themes/base/slider.css" />
+    <link rel="stylesheet" href="bower/normalize-css/normalize.css">
+    <link rel="stylesheet" href="bower/lightbox2/dist/css/lightbox.min.css">
+    <link rel="stylesheet" href="bower/jquery-ui/themes/base/slider.css">
+    <link rel="stylesheet" href="bower/select2/dist/css/select2.min.css">
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:js js/modernizr.min.js -->
-    <script src="bower/modernizr/src/Modernizr.js"></script>
+    <script src="bower/modernizer/modernizr.js"></script>
     <!-- endbuild -->
   </head>
 </html>
@@ -47,8 +57,8 @@
           </div>
           <div class="contacts contacts_header">
             <ul class="contacts__list">
-              <li class="contacts__address">ул. Маяковская 6, офис 17</li>
-              <li class="contacts__phone">+7 (921) 123-12-13</li>
+              <li class="contacts__item contacts__item_address">ул. Маяковская 6, офис 17</li>
+              <li class="contacts__item contacts__item_phone"> <a href="tel:+79211231213" class="contacts__link_phone">+7 (921) 123-12-13</a></li>
             </ul>
           </div>
         </div>
@@ -65,9 +75,9 @@
           </div>
           <div class="menu menu_header">
             <ul class="menu__list">
-              <li class="menu__item"><a href="#" class="menu__link menu__link_Карта проезда">Карта проезда</a></li>
-              <li class="menu__item"><a href="#" class="menu__link menu__link_История заказов">История заказов</a></li>
-              <li class="menu__item"><a href="#" class="menu__link menu__link_Корзина">Корзина</a></li>
+              <li class="menu__item"><a href="#" class="menu__link menu__link">Карта проезда</a></li>
+              <li class="menu__item"><a href="#" class="menu__link menu__link">История заказов</a></li>
+              <li class="menu__item"><a href="#" class="menu__link menu__link">Корзина</a></li>
             </ul>
           </div>
         </div>
@@ -95,8 +105,8 @@
       <aside class="sidebar">
         <div class="value-selector value-selector_aside">
           <ul class="value-selector__list">
-            <li class="value-selector__item"><a href="#" class="value-selector__link value-selector__link_Флагманы">Флагманы</a></li>
-            <li class="value-selector__item"><a href="#" class="value-selector__link value-selector__link_Бюджетная линейка">Бюджетная линейка</a></li>
+            <li class="value-selector__item active"><a href="#" class="value-selector__link">Флагманы</a></li>
+            <li class="value-selector__item"><a href="#" class="value-selector__link">Бюджетная линейка</a></li>
           </ul>
         </div>
         <div class="options">
@@ -162,14 +172,14 @@
                     <div class="options__slider-displays">
                       <div class="options__slider-left">
                         <div class="options__slider-text">от</div>
-                        <input name="" type="text" placeholder="" class="options__slider-input options__slider-input_from"/>
+                        <input name="" type="text" placeholder="100" class="options__slider-input options__slider-input_from"/>
                       </div>
                       <div class="options__slider-right">
                         <div class="options__slider-text">до</div>
-                        <input name="" type="text" placeholder="" class="options__slider-input options__slider-input_to"/>
+                        <input name="" type="text" placeholder="50000" class="options__slider-input options__slider-input_to"/>
                       </div>
                     </div>
-                    <div data-min="0" data-max="30000" class="options__slider-element">  </div>
+                    <div data-min="100" data-max="50000" class="options__slider-element">  </div>
                   </div>
                 </div>
               </div>
@@ -245,7 +255,7 @@
           </div>
           <div class="sort__view"> <span class="view__heading">Вид каталога</span>
             <ul class="view__list">
-              <li data-view="rows" class="view__item view__item_rows"><a href="#" class="view__item_link view__item_link-rows"></a></li>
+              <li data-view="rows" class="view__item view__item_rows"><a href="#" class="view__item_link view__item_link-rows active"></a></li>
               <li data-view="grids" class="view__item view__item_grids"><a href="#" class="view__item_link view__item_link-grids"></a></li>
               <li data-view="lines" class="view__item view__item_lines"><a href="#" class="view__item_link view__item_link-lines"></a></li>
             </ul>
@@ -257,7 +267,7 @@
               <div class="products__item_inner">
                 <div class="products__left">
                   <div class="products__slideshow">
-                    <div class="products__slideshow-block"><a href="#" data-lightbox="0" class="products__slideshow-display"><img src="img/items/lumia/lumia-0.jpg" alt="" class="products__slideshow-img"/></a>
+                    <div class="products__slideshow-block"><a href="#" rel="lightbox" class="products__slideshow-display"><img src="img/items/lumia/lumia-0.jpg" alt="" class="products__slideshow-img"/></a>
                       <ul class="products__slideshow-thumbs">
                         <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-1.jpg" alt="" class="products__slideshow-thumb-img"/></a></li>
                         <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-2.jpg" alt="" class="products__slideshow-thumb-img"/></a></li>
@@ -270,7 +280,7 @@
                     </div>
                   </div>
                   <div class="products__desc">
-                    <div class="products__desc-title">Смартфон Samsung GT-I9301I GALAXY S 3 </div>
+                    <div class="products__desc-title"><a class="products__desc-link">Смартфон Samsung GT-I9301I GALAXY S 3 </a></div>
                     <ul class="products__desc-options">
                       <li class="products__option-item products__option-item_colored">
                         <div class="products__option-key">Тип SIM-карты</div>
@@ -328,7 +338,7 @@
               <div class="products__item_inner">
                 <div class="products__left">
                   <div class="products__slideshow">
-                    <div class="products__slideshow-block"><a href="#" data-lightbox="1" class="products__slideshow-display"><img src="img/items/lumia/lumia-0.jpg" alt="" class="products__slideshow-img"/></a>
+                    <div class="products__slideshow-block"><a href="#" rel="lightbox" class="products__slideshow-display"><img src="img/items/lumia/lumia-0.jpg" alt="" class="products__slideshow-img"/></a>
                       <ul class="products__slideshow-thumbs">
                         <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-1.jpg" alt="" class="products__slideshow-thumb-img"/></a></li>
                         <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-2.jpg" alt="" class="products__slideshow-thumb-img"/></a></li>
@@ -341,7 +351,7 @@
                     </div>
                   </div>
                   <div class="products__desc">
-                    <div class="products__desc-title">Смартфон Samsung GT-I9301I GALAXY S 3 </div>
+                    <div class="products__desc-title"><a class="products__desc-link">Смартфон Samsung GT-I9301I GALAXY S 3 </a></div>
                     <ul class="products__desc-options">
                       <li class="products__option-item products__option-item_colored">
                         <div class="products__option-key">Тип SIM-карты</div>
@@ -399,7 +409,7 @@
               <div class="products__item_inner">
                 <div class="products__left">
                   <div class="products__slideshow">
-                    <div class="products__slideshow-block"><a href="#" data-lightbox="2" class="products__slideshow-display"><img src="img/items/lumia/lumia-0.jpg" alt="" class="products__slideshow-img"/></a>
+                    <div class="products__slideshow-block"><a href="#" rel="lightbox" class="products__slideshow-display"><img src="img/items/lumia/lumia-0.jpg" alt="" class="products__slideshow-img"/></a>
                       <ul class="products__slideshow-thumbs">
                         <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-1.jpg" alt="" class="products__slideshow-thumb-img"/></a></li>
                         <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-2.jpg" alt="" class="products__slideshow-thumb-img"/></a></li>
@@ -412,7 +422,7 @@
                     </div>
                   </div>
                   <div class="products__desc">
-                    <div class="products__desc-title">Смартфон Samsung GT-I9301I GALAXY S 3 </div>
+                    <div class="products__desc-title"><a class="products__desc-link">Смартфон Samsung GT-I9301I GALAXY S 3 </a></div>
                     <ul class="products__desc-options">
                       <li class="products__option-item products__option-item_colored">
                         <div class="products__option-key">Тип SIM-карты</div>
@@ -470,7 +480,7 @@
               <div class="products__item_inner">
                 <div class="products__left">
                   <div class="products__slideshow">
-                    <div class="products__slideshow-block"><a href="#" data-lightbox="3" class="products__slideshow-display"><img src="img/items/lumia/lumia-0.jpg" alt="" class="products__slideshow-img"/></a>
+                    <div class="products__slideshow-block"><a href="#" rel="lightbox" class="products__slideshow-display"><img src="img/items/lumia/lumia-0.jpg" alt="" class="products__slideshow-img"/></a>
                       <ul class="products__slideshow-thumbs">
                         <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-1.jpg" alt="" class="products__slideshow-thumb-img"/></a></li>
                         <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-2.jpg" alt="" class="products__slideshow-thumb-img"/></a></li>
@@ -483,7 +493,7 @@
                     </div>
                   </div>
                   <div class="products__desc">
-                    <div class="products__desc-title">Смартфон Samsung GT-I9301I GALAXY S 3 </div>
+                    <div class="products__desc-title"><a class="products__desc-link">Смартфон Samsung GT-I9301I GALAXY S 3 </a></div>
                     <ul class="products__desc-options">
                       <li class="products__option-item products__option-item_colored">
                         <div class="products__option-key">Тип SIM-карты</div>
@@ -541,7 +551,7 @@
               <div class="products__item_inner">
                 <div class="products__left">
                   <div class="products__slideshow">
-                    <div class="products__slideshow-block"><a href="#" data-lightbox="4" class="products__slideshow-display"><img src="img/items/lumia/lumia-0.jpg" alt="" class="products__slideshow-img"/></a>
+                    <div class="products__slideshow-block"><a href="#" rel="lightbox" class="products__slideshow-display"><img src="img/items/lumia/lumia-0.jpg" alt="" class="products__slideshow-img"/></a>
                       <ul class="products__slideshow-thumbs">
                         <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-1.jpg" alt="" class="products__slideshow-thumb-img"/></a></li>
                         <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-2.jpg" alt="" class="products__slideshow-thumb-img"/></a></li>
@@ -554,7 +564,7 @@
                     </div>
                   </div>
                   <div class="products__desc">
-                    <div class="products__desc-title">Смартфон Samsung GT-I9301I GALAXY S 3 </div>
+                    <div class="products__desc-title"><a class="products__desc-link">Смартфон Samsung GT-I9301I GALAXY S 3 </a></div>
                     <ul class="products__desc-options">
                       <li class="products__option-item products__option-item_colored">
                         <div class="products__option-key">Тип SIM-карты</div>
@@ -612,7 +622,7 @@
               <div class="products__item_inner">
                 <div class="products__left">
                   <div class="products__slideshow">
-                    <div class="products__slideshow-block"><a href="#" data-lightbox="5" class="products__slideshow-display"><img src="img/items/lumia/lumia-0.jpg" alt="" class="products__slideshow-img"/></a>
+                    <div class="products__slideshow-block"><a href="#" rel="lightbox" class="products__slideshow-display"><img src="img/items/lumia/lumia-0.jpg" alt="" class="products__slideshow-img"/></a>
                       <ul class="products__slideshow-thumbs">
                         <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-1.jpg" alt="" class="products__slideshow-thumb-img"/></a></li>
                         <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-2.jpg" alt="" class="products__slideshow-thumb-img"/></a></li>
@@ -625,7 +635,7 @@
                     </div>
                   </div>
                   <div class="products__desc">
-                    <div class="products__desc-title">Смартфон Samsung GT-I9301I GALAXY S 3 </div>
+                    <div class="products__desc-title"><a class="products__desc-link">Смартфон Samsung GT-I9301I GALAXY S 3 </a></div>
                     <ul class="products__desc-options">
                       <li class="products__option-item products__option-item_colored">
                         <div class="products__option-key">Тип SIM-карты</div>
@@ -683,7 +693,7 @@
               <div class="products__item_inner">
                 <div class="products__left">
                   <div class="products__slideshow">
-                    <div class="products__slideshow-block"><a href="#" data-lightbox="6" class="products__slideshow-display"><img src="img/items/lumia/lumia-0.jpg" alt="" class="products__slideshow-img"/></a>
+                    <div class="products__slideshow-block"><a href="#" rel="lightbox" class="products__slideshow-display"><img src="img/items/lumia/lumia-0.jpg" alt="" class="products__slideshow-img"/></a>
                       <ul class="products__slideshow-thumbs">
                         <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-1.jpg" alt="" class="products__slideshow-thumb-img"/></a></li>
                         <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-2.jpg" alt="" class="products__slideshow-thumb-img"/></a></li>
@@ -696,7 +706,7 @@
                     </div>
                   </div>
                   <div class="products__desc">
-                    <div class="products__desc-title">Смартфон Samsung GT-I9301I GALAXY S 3 </div>
+                    <div class="products__desc-title"><a class="products__desc-link">Смартфон Samsung GT-I9301I GALAXY S 3 </a></div>
                     <ul class="products__desc-options">
                       <li class="products__option-item products__option-item_colored">
                         <div class="products__option-key">Тип SIM-карты</div>
@@ -754,7 +764,7 @@
               <div class="products__item_inner">
                 <div class="products__left">
                   <div class="products__slideshow">
-                    <div class="products__slideshow-block"><a href="#" data-lightbox="7" class="products__slideshow-display"><img src="img/items/lumia/lumia-0.jpg" alt="" class="products__slideshow-img"/></a>
+                    <div class="products__slideshow-block"><a href="#" rel="lightbox" class="products__slideshow-display"><img src="img/items/lumia/lumia-0.jpg" alt="" class="products__slideshow-img"/></a>
                       <ul class="products__slideshow-thumbs">
                         <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-1.jpg" alt="" class="products__slideshow-thumb-img"/></a></li>
                         <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-2.jpg" alt="" class="products__slideshow-thumb-img"/></a></li>
@@ -767,7 +777,7 @@
                     </div>
                   </div>
                   <div class="products__desc">
-                    <div class="products__desc-title">Смартфон Samsung GT-I9301I GALAXY S 3 </div>
+                    <div class="products__desc-title"><a class="products__desc-link">Смартфон Samsung GT-I9301I GALAXY S 3 </a></div>
                     <ul class="products__desc-options">
                       <li class="products__option-item products__option-item_colored">
                         <div class="products__option-key">Тип SIM-карты</div>
@@ -825,7 +835,7 @@
               <div class="products__item_inner">
                 <div class="products__left">
                   <div class="products__slideshow">
-                    <div class="products__slideshow-block"><a href="#" data-lightbox="8" class="products__slideshow-display"><img src="img/items/lumia/lumia-0.jpg" alt="" class="products__slideshow-img"/></a>
+                    <div class="products__slideshow-block"><a href="#" rel="lightbox" class="products__slideshow-display"><img src="img/items/lumia/lumia-0.jpg" alt="" class="products__slideshow-img"/></a>
                       <ul class="products__slideshow-thumbs">
                         <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-1.jpg" alt="" class="products__slideshow-thumb-img"/></a></li>
                         <li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/items/lumia/lumia-2.jpg" alt="" class="products__slideshow-thumb-img"/></a></li>
@@ -838,7 +848,7 @@
                     </div>
                   </div>
                   <div class="products__desc">
-                    <div class="products__desc-title">Смартфон Samsung GT-I9301I GALAXY S 3 </div>
+                    <div class="products__desc-title"><a class="products__desc-link">Смартфон Samsung GT-I9301I GALAXY S 3 </a></div>
                     <ul class="products__desc-options">
                       <li class="products__option-item products__option-item_colored">
                         <div class="products__option-key">Тип SIM-карты</div>
@@ -923,43 +933,45 @@
     </div>
   </div>
   <footer class="footer">
-    <div class="footer__container">
-      <div class="logo logo_footer float-left footer__logo_float-left"><a href="" class="logo__link"><img src="img/logo-footer.png" class="logo__img"/>
-          <div class="logo__text">CoolTech</div></a></div>
-      <div class="social social_footer">
-        <ul class="social__list">
-          <li class="social__item social__item_footer"><a href="#" target="blank" class="social__link social__link_footer social__link_footer-Facebook">Facebook</a></li>
-          <li class="social__item social__item_footer"><a href="#" target="blank" class="social__link social__link_footer social__link_footer-VK">VK</a></li>
-          <li class="social__item social__item_footer"><a href="#" target="blank" class="social__link social__link_footer social__link_footer-Twitter">Twitter</a></li>
-        </ul>
+    <div class="footer__wrapper">
+      <div class="footer__container">
+        <div class="logo logo_footer float-left footer__logo_float-left"><a href="" class="logo__link"><img src="img/logo-footer.png" class="logo__img"/>
+            <div class="logo__text">CoolTech</div></a></div>
+        <div class="social social_footer">
+          <ul class="social__list">
+            <li class="social__item social__item_footer"><a href="#" target="blank" class="social__link social__link_footer social__link_footer-Facebook">Facebook</a></li>
+            <li class="social__item social__item_footer"><a href="#" target="blank" class="social__link social__link_footer social__link_footer-VK">VK</a></li>
+            <li class="social__item social__item_footer"><a href="#" target="blank" class="social__link social__link_footer social__link_footer-Twitter">Twitter</a></li>
+          </ul>
+        </div>
+        <nav class="navigation navigation_footer">
+          <ul class="navigation__list navigation__list_footer">
+            <li class="navigation__item navigation__item_footer"><a href="#" class="navigation__link navigation__link_footer">Планшеты</a></li>
+            <li class="navigation__item navigation__item_footer active"><a href="#" class="navigation__link navigation__link_footer">Мобильные телефоны</a></li>
+            <li class="navigation__item navigation__item_footer"><a href="#" class="navigation__link navigation__link_footer">Mp3 плееры</a></li>
+            <li class="navigation__item navigation__item_footer"><a href="#" class="navigation__link navigation__link_footer">Персональные компьютеры</a></li>
+            <li class="navigation__item navigation__item_footer"><a href="#" class="navigation__link navigation__link_footer">Ноутбуки</a></li>
+            <li class="navigation__item navigation__item_footer"><a href="#" class="navigation__link navigation__link_footer">Аксессуары</a></li>
+            <li class="navigation__item navigation__item_footer"><a href="#" class="navigation__link navigation__link_footer">Бытовая техника</a></li>
+          </ul>
+        </nav>
       </div>
-      <nav class="navigation navigation_footer">
-        <ul class="navigation__list navigation__list_footer">
-          <li class="navigation__item navigation__item_footer"><a href="#" class="navigation__link navigation__link_footer">Планшеты</a></li>
-          <li class="navigation__item navigation__item_footer active"><a href="#" class="navigation__link navigation__link_footer">Мобильные телефоны</a></li>
-          <li class="navigation__item navigation__item_footer"><a href="#" class="navigation__link navigation__link_footer">Mp3 плееры</a></li>
-          <li class="navigation__item navigation__item_footer"><a href="#" class="navigation__link navigation__link_footer">Персональные компьютеры</a></li>
-          <li class="navigation__item navigation__item_footer"><a href="#" class="navigation__link navigation__link_footer">Ноутбуки</a></li>
-          <li class="navigation__item navigation__item_footer"><a href="#" class="navigation__link navigation__link_footer">Аксессуары</a></li>
-          <li class="navigation__item navigation__item_footer"><a href="#" class="navigation__link navigation__link_footer">Бытовая техника</a></li>
-        </ul>
-      </nav>
-      <div class="copyright copyright_footer"><span class="copyright__span">All rights reserved. 2015. No copy allowed</span></div>
     </div>
-  </footer><!-- build:js js/vendor.min.js -->            
-  <!-- bower:js -->
-  <script src="bower/jquery/dist/jquery.js"></script>
-  <script src="bower/jquery.columnizer/src/jquery.columnizer.js"></script>
-  <script src="bower/lightbox2/dist/js/lightbox.js"></script>
-  <script src="bower/select2/dist/js/select2.js"></script>
-  <script src="bower/jquery-ui/ui/slider.js"></script>
-  <script src="bower/jquery-ui/jquery-ui.min.js"></script>
-  <!-- endbower -->
-  <!-- endbuild -->
-  <!-- build:js js/main.min.js -->
-  <script src="js/main.js"></script>
-  <script src="js/changeView.js"></script>
-  <script src="js/slideshow.js"></script>
-  <script src="js/accordeon.js"></script>
-  <!-- endbuild -->
+    <div class="copyright copyright_footer"><span class="copyright__span">All rights reserved. 2015. No copy allowed</span><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+      <script>window.jQuery || document.write('<script src="bower/jquery/dist/jquery.js"><\/script>');
+      </script>
+      <!-- build:js js/vendor.min.js -->            
+      <!-- bower:js -->
+      <script src="bower/jquery.columnizer/src/jquery.columnizer.min.js"></script>
+      <script src="bower/lightbox2/dist/js/lightbox.min.js"></script>    
+      <script src="bower/jquery-ui/jquery-ui.min.js"></script>    
+      <script src="bower/jquery-ui/ui/slider.js"></script>    
+      <script src="bower/select2/dist/js/select2.min.js"></script>   
+      <!-- endbower -->
+      <!-- endbuild -->
+      <!-- build:js js/main.min.js -->
+      <script src="js/main.js"></script>
+      <!-- endbuild -->
+    </div>
+  </footer>
 </body>

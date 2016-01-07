@@ -5,7 +5,10 @@
 
 aside.sidebar
   div(class="value-selector value-selector_aside")
-    +menu(valueSelector, 'value-selector')
+    ul.value-selector__list
+      each item in valueSelector
+        li(class="value-selector__item" + ((item == "Флагманы") ? ' active' : ''))
+          a(href="#" class="value-selector__link") #{item}
   .options
     ul.options__list
       li.options__item.active
@@ -35,11 +38,11 @@ aside.sidebar
               .options__slider-displays
                 .options__slider-left
                   .options__slider-text от
-                  input(name="" type="text" placeholder="").options__slider-input.options__slider-input_from
+                  input(name="" type="text" placeholder="100").options__slider-input.options__slider-input_from
                 .options__slider-right
                   .options__slider-text до
-                  input(name="" type="text" placeholder="").options__slider-input.options__slider-input_to
-              div(class="options__slider-element" data-min="0" data-max="30000")   
+                  input(name="" type="text" placeholder="50000").options__slider-input.options__slider-input_to
+              div(class="options__slider-element" data-min="100" data-max="50000")   
       li.options__item.active
         div.options-block
           h4.options-block__heading Цвет

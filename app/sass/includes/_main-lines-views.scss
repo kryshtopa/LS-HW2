@@ -11,8 +11,11 @@
     box-sizing: border-box;
     padding: 7px 14px 10px 12px;
   }
+  .products__item {
+    height: 56px;
+  }
   .products__left {
-    width: 415px;
+    width: 410px;
     padding-top: 11px;
   }
   .products__article {
@@ -25,7 +28,7 @@
     color: #333;
   }
   .products__desc {
-    width: 300px;
+    width: 290px;
     margin-left: 5px;
   }
   .products__desc-title {
@@ -53,12 +56,14 @@
     @include inlineblock;
     vertical-align: middle;
     margin-right: 10px;
+    margin-top: 11px;
   }
   .products__info-bottom {
     position: static;
     @include inlineblock;
     vertical-align: middle;
     padding: 0;
+    margin-bottom: 6px;
   }
   .products__buy-btn {
     float: right;

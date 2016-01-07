@@ -8,7 +8,7 @@ sass_dir = "app/sass"
 images_dir = "app/img"
 javascripts_dir = "app/js"
 
-# You can select your preferred output style here (can be overridden via the command line):
+# You can select your preferred output style here (can be overridden via the com line):
 
 output_style = :expanded
 
