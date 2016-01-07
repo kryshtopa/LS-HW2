@@ -1,6 +1,7 @@
 // Слайдер
 var slider = (function() {
 
+  // Меняет значение в инпуте в сответствии с положением слайдера
   var _insertValues = function ($this) {
     var container = $this.closest('.options__slider'),
     from = container.find('.options__slider-input_from'),
@@ -9,6 +10,34 @@ var slider = (function() {
 
     from.val(values[0]);
     to.val(values[1]);
+
+  }
+
+  // Передвигает слайдер в соответсвии с введенным в инпут значением
+  var _moveSlider = function ($this) {
+    $(".options__slider-input_from").change(function(){
+    	var value1 = $(".options__slider-input_from").val();
+    	var value2 = $(".options__slider-input_to").val();
+
+        if(parseInt(value1) > parseInt(value2)){
+    		value1 = value2;
+    		$(".options__slider-input_from").val(value1);
+    	}
+    	$(".options__slider-element").slider("values",0,value1);
+    });
+
+    $(".options__slider-input_to").change(function(){
+    	var value1 = $(".options__slider-input_from").val();
+    	var value2 = $(".options__slider-input_to").val();
+
+    	if (value2 > 50000) { value2 = 50000; $(".options__slider-input_to").val(50000)}
+
+    	if(parseInt(value1) > parseInt(value2)){
+    		value2 = value1;
+    		$(".options__slider-input_to").val(value2);
+    	}
+    	$(".options__slider-element").slider("values",1,value2);
+    });
 
   }
 
@@ -30,6 +59,9 @@ var slider = (function() {
 
           }
         });
+
+        _moveSlider($this);
+
       });
     }
   }
